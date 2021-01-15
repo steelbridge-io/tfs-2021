@@ -13,6 +13,7 @@
   $basic_logo_upload = get_theme_mod ('basic_page_logo');
   
   include_once('post-meta/post-meta-signature.php');
+  $default = '';
   get_header(); ?>
   
   </div> <!-- /.container-fluid. Opening tag found in header.php-->
@@ -171,8 +172,10 @@
               </div>
             </div>
           </div><!-- Item slider end-->
-        <?php endif; ?>
-      
+        <?php endif;
+        
+        if ($signature_image_1 !== '' ) { ?>
+        
       <!-- ==== GRID SECTION ==== -->
       <div class="pt-1618 container-fluid signature_bg_color">
         <div class="row">
@@ -188,6 +191,9 @@
               </section>
             </div>
           </div>
+          
+          <?php if($signature_image_2 !== '' ) { ?>
+          
           <div class="col-md-4">
             <div class="thumbnail signature-text-color">
               <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_2_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_2_title; ?></a></h3>
@@ -200,6 +206,10 @@
               </section>
             </div>
           </div>
+            
+            <?php }
+	        if($signature_image_3 !== '' ) { ?>
+          
           <div class="col-md-4">
             <div class="thumbnail signature-text-color">
               <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_3_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_3_title; ?></a></h3>
@@ -212,11 +222,12 @@
               </section>
             </div>
           </div>
+          <?php } ?>
         </div>
         
         <?php
           // Optional images 4, 5, 6
-          if(get_post_meta(get_the_ID(), 'signature-456-checkbox', true) == 'yes') :?>
+          if($signature_image_4 !== '' ) { ?>
             
             <div class="row">
               <div class="col-md-4">
@@ -231,6 +242,9 @@
                   </section>
                 </div>
               </div>
+              
+              <?php if($signature_image_5 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_5_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_5_title; ?></a></h3>
@@ -243,6 +257,11 @@
                   </section>
                 </div>
               </div>
+              
+              <?php }
+	
+	          if($signature_image_6 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_6_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_6_title; ?></a></h3>
@@ -255,15 +274,12 @@
                   </section>
                 </div>
               </div>
+              <?php } ?>
             </div>
-          
-          <?php else: ?>
-            <div style="display:none"></div>
-          <?php endif; ?>
-        
-        <?php
+            
+        <?php }
           // Optional images 7, 8, 9
-          if(get_post_meta(get_the_ID(), 'signature-789-checkbox', true) == 'yes') :?>
+          if($signature_image_7 !== '' ) { ?>
             
             <div class="row">
               <div class="col-md-4">
@@ -278,6 +294,9 @@
                   </section>
                 </div>
               </div>
+              
+              <?php if( $signature_image_8 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_8_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_8_title; ?></a></h3>
@@ -290,6 +309,10 @@
                   </section>
                 </div>
               </div>
+              
+              <?php }
+              if( $signature_image_9 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_9_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_9_title; ?></a></h3>
@@ -302,15 +325,12 @@
                   </section>
                 </div>
               </div>
+              <?php } ?>
             </div>
-          
-          <?php else: ?>
-            <div style="display:none"></div>
-          <?php endif; ?>
         
-        <?php
+        <?php }
           // Optional images 10, 11, 12
-          if(get_post_meta(get_the_ID(), 'signature-101112-checkbox', true) == 'yes') :?>
+	        if( $signature_image_10 !== '' ) { ?>
             
             <div class="row">
               <div class="col-md-4">
@@ -325,6 +345,9 @@
                   </section>
                 </div>
               </div>
+              
+              <?php if( $signature_image_11 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_11_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_11_title; ?></a></h3>
@@ -337,6 +360,10 @@
                   </section>
                 </div>
               </div>
+                
+                <?php }
+			    if( $signature_image_12 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_12_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_12_title; ?></a></h3>
@@ -349,15 +376,12 @@
                   </section>
                 </div>
               </div>
+              <?php } ?>
             </div>
-          
-          <?php else: ?>
-            <div style="display:none"></div>
-          <?php endif; ?>
-        
-        <?php
-          // Optional images 13, 14, 15
-          if(get_post_meta(get_the_ID(), 'signature-131415-checkbox', true) == 'yes') :?>
+            
+            <?php }
+            // Optional images 13, 14, 15
+	        if( $signature_image_13 !== '' ) { ?>
             
             <div class="row">
               <div class="col-md-4">
@@ -372,6 +396,9 @@
                   </section>
                 </div>
               </div>
+              
+              <?php if( $signature_image_14 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_14_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_14_title; ?></a></h3>
@@ -384,6 +411,10 @@
                   </section>
                 </div>
               </div>
+                
+                <?php }
+			    if( $signature_image_15 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_15_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_15_title; ?></a></h3>
@@ -396,15 +427,14 @@
                   </section>
                 </div>
               </div>
+              
+              <?php } ?>
+              
             </div>
-          
-          <?php else: ?>
-            <div style="display:none"></div>
-          <?php endif; ?>
-        
-        <?php
+            
+        <?php }
           // Optional images 16, 17, 18
-          if(get_post_meta(get_the_ID(), 'signature-161718-checkbox', true) == 'yes') :?>
+	        if( $signature_image_16 !== '' ) { ?>
             
             <div class="row">
               <div class="col-md-4">
@@ -419,6 +449,9 @@
                   </section>
                 </div>
               </div>
+              
+              <?php if( $signature_image_17 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_17_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_17_title; ?></a></h3>
@@ -431,6 +464,10 @@
                   </section>
                 </div>
               </div>
+                
+                <?php }
+			    if( $signature_image_18 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_18_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_18_title; ?></a></h3>
@@ -443,15 +480,14 @@
                   </section>
                 </div>
               </div>
+              
+              <?php } ?>
+              
             </div>
-          
-          <?php else: ?>
-            <div style="display:none"></div>
-          <?php endif; ?>
         
-        <?php
+          <?php }
           // Optional images 19, 20, 21
-          if(get_post_meta(get_the_ID(), 'signature-192021-checkbox', true) == 'yes') :?>
+          if( $signature_image_19 !== '' ) { ?>
             
             <div class="row">
               <div class="col-md-4">
@@ -466,6 +502,9 @@
                   </section>
                 </div>
               </div>
+              
+              <?php if( $signature_image_20 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_20_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_20_title; ?></a></h3>
@@ -478,6 +517,10 @@
                   </section>
                 </div>
               </div>
+              
+              <?php }
+	          if( $signature_image_21 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_21_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_21_title; ?></a></h3>
@@ -490,15 +533,14 @@
                   </section>
                 </div>
               </div>
+              
+              <?php } ?>
+              
             </div>
-          
-          <?php else: ?>
-            <div style="display:none"></div>
-          <?php endif; ?>
         
-        <?php
+        <?php }
           // Optional images 22, 23, 24
-          if(get_post_meta(get_the_ID(), 'signature-222324-checkbox', true) == 'yes') :?>
+	    if( $signature_image_22 !== '' ) { ?>
             
             <div class="row">
               <div class="col-md-4">
@@ -513,6 +555,9 @@
                   </section>
                 </div>
               </div>
+              
+              <?php if( $signature_image_23 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_23_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_23_title; ?></a></h3>
@@ -525,6 +570,10 @@
                   </section>
                 </div>
               </div>
+              
+              <?php }
+              if( $signature_image_24 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_24_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_24_title; ?></a></h3>
@@ -537,15 +586,14 @@
                   </section>
                 </div>
               </div>
+              
+              <?php } ?>
+              
             </div>
-          
-          <?php else: ?>
-            <div style="display:none"></div>
-          <?php endif; ?>
         
-        <?php
+        <?php }
           // Optional images 25, 26, 27
-          if(get_post_meta(get_the_ID(), 'signature-252627-checkbox', true) == 'yes') :?>
+	        if( $signature_image_25 !== '' ) { ?>
             
             <div class="row">
               <div class="col-md-4">
@@ -560,6 +608,9 @@
                   </section>
                 </div>
               </div>
+              
+              <?php if( $signature_image_26 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_26_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_26_title; ?></a></h3>
@@ -572,6 +623,10 @@
                   </section>
                 </div>
               </div>
+              
+              <?php }
+              if( $signature_image_27 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_27_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_27_title; ?></a></h3>
@@ -584,15 +639,14 @@
                   </section>
                 </div>
               </div>
+              
+              <?php } ?>
+              
             </div>
-          
-          <?php else: ?>
-            <div style="display:none"></div>
-          <?php endif; ?>
-        
-        <?php
-          // Optional images 28, 29, 30
-          if(get_post_meta(get_the_ID(), 'signature-282930-checkbox', true) == 'yes') :?>
+            
+            <?php }
+            // Optional images 28, 29, 30
+	        if( $signature_image_28 !== '' ) { ?>
             
             <div class="row">
               <div class="col-md-4">
@@ -607,6 +661,9 @@
                   </section>
                 </div>
               </div>
+              
+              <?php if( $signature_image_29 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_29_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_29_title; ?></a></h3>
@@ -619,6 +676,10 @@
                   </section>
                 </div>
               </div>
+              
+              <?php }
+              if( $signature_image_30 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_30_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_30_title; ?></a></h3>
@@ -631,15 +692,14 @@
                   </section>
                 </div>
               </div>
+              
+              <?php } ?>
+              
             </div>
-          
-          <?php else: ?>
-            <div style="display:none"></div>
-          <?php endif; ?>
-        
-        <?php
-          // Optional images 31, 32, 33
-          if(get_post_meta(get_the_ID(), 'signature-313233-checkbox', true) == 'yes') :?>
+            
+            <?php }
+            // Optional images 31, 32, 33
+	        if( $signature_image_31 !== '' ) { ?>
             
             <div class="row">
               <div class="col-md-4">
@@ -654,6 +714,9 @@
                   </section>
                 </div>
               </div>
+              
+              <?php if( $signature_image_32 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_32_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_32_title; ?></a></h3>
@@ -666,6 +729,9 @@
                   </section>
                 </div>
               </div>
+              
+              <?php } if( $signature_image_33 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_33_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_33_title; ?></a></h3>
@@ -678,15 +744,14 @@
                   </section>
                 </div>
               </div>
+              
+              <?php } ?>
+              
             </div>
           
-          <?php else: ?>
-            <div style="display:none"></div>
-          <?php endif; ?>
-        
-        <?php
-          // Optional images 34, 35, 36
-          if(get_post_meta(get_the_ID(), 'signature-343536-checkbox', true) == 'yes') :?>
+            <?php }
+            // Optional images 34, 35, 36
+	        if( $signature_image_34 !== '' ) { ?>
             
             <div class="row">
               <div class="col-md-4">
@@ -701,6 +766,9 @@
                   </section>
                 </div>
               </div>
+              
+              <?php if( $signature_image_35 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_35_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_35_title; ?></a></h3>
@@ -713,6 +781,10 @@
                   </section>
                 </div>
               </div>
+              
+              <?php }
+			  if( $signature_image_36 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_36_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_36_title; ?></a></h3>
@@ -725,15 +797,14 @@
                   </section>
                 </div>
               </div>
+              
+              <?php } ?>
+              
             </div>
-          
-          <?php else: ?>
-            <div style="display:none"></div>
-          <?php endif; ?>
         
-        <?php
-          // Optional images 37, 38, 39
-          if(get_post_meta(get_the_ID(), 'signature-373839-checkbox', true) == 'yes') :?>
+            <?php }
+            // Optional images 37, 38, 39
+	        if( $signature_image_37 !== '' ) { ?>
             
             <div class="row">
               <div class="col-md-4">
@@ -748,6 +819,9 @@
                   </section>
                 </div>
               </div>
+              
+              <?php if( $signature_image_38 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_38_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_38_title; ?></a></h3>
@@ -760,6 +834,10 @@
                   </section>
                 </div>
               </div>
+              
+              <?php }
+              if( $signature_image_39 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_39_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_39_title; ?></a></h3>
@@ -772,15 +850,14 @@
                   </section>
                 </div>
               </div>
+              
+              <?php } ?>
+              
             </div>
-          
-          <?php else: ?>
-            <div style="display:none"></div>
-          <?php endif; ?>
         
-        <?php
-          // Optional images 40, 41, 42
-          if(get_post_meta(get_the_ID(), 'signature-404142-checkbox', true) == 'yes') :?>
+            <?php }
+            // Optional images 40, 41, 42
+	        if( $signature_image_40 !== '' ) { ?>
             
             <div class="row">
               <div class="col-md-4">
@@ -795,6 +872,9 @@
                   </section>
                 </div>
               </div>
+              
+              <?php if( $signature_image_41 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_41_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_41_title; ?></a></h3>
@@ -807,6 +887,10 @@
                   </section>
                 </div>
               </div>
+              
+              <?php }
+			  if( $signature_image_42 !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_image_42_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_image_42_title; ?></a></h3>
@@ -819,15 +903,14 @@
                   </section>
                 </div>
               </div>
+              
+              <?php } ?>
+              
             </div>
-          
-          <?php else: ?>
-            <div style="display:none"></div>
-          <?php endif; ?>
-        
-        <?php
-          // Optional centered left and right images
-          if(get_post_meta(get_the_ID(), 'signature-2-checkbox', true) == 'yes') :?>
+         
+            <?php }
+            // Optional centered left and right images
+	        if( $signature_centered_l !== '' ) { ?>
             
             <div class="row">
               <div class="col-md-4 col-md-offset-2">
@@ -842,6 +925,9 @@
                   </section>
                 </div>
               </div>
+              
+              <?php if( $signature_centered_r !== '' ) { ?>
+              
               <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_centered_r_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_centered_r_title; ?></a></h3>
@@ -854,15 +940,14 @@
                   </section>
                 </div>
               </div>
+              
+              <?php } ?>
+              
             </div>
           
-          <?php else: ?>
-            <div style="display:none"></div>
-          <?php endif; ?>
-        
-        <?php
-          // Optional final centered image
-          if(get_post_meta(get_the_ID(), 'signature-1-checkbox', true) == 'yes') :?>
+           <?php }
+           // Optional final centered image
+            if( $signature_centered_image !== '' ) { ?>
             
             <div class="row">
               <div class="col-md-4 col-md-offset-4">
@@ -879,12 +964,11 @@
               </div>
             </div>
           
-          <?php else: ?>
-            <div style="display:none"></div>
-          <?php endif; ?>
+          <?php } ?>
         
         <!-- ./end of template content -->
       </div><!-- ./container-fluid -->
+      <?php } ?>
     </div><!-- #/main -->
   </div>
 

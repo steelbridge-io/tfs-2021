@@ -2756,4 +2756,13 @@ div.ctct-form-embed form.ctct-form-custom label.ctct-form-label {
   outline: none !important;
 }
 
+/** SCSS Signature Template
+============================== */
+@media (min-width: 991px) {
+  .adventures-template-signature-template #primary .signature_bg_color .row {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 /*# sourceMappingURL=custom.css.map */
