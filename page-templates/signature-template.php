@@ -913,7 +913,7 @@
 	        if( $signature_centered_l !== '' ) { ?>
             
             <div class="row">
-              <div class="col-md-4 col-md-offset-2">
+              <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_centered_l_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_centered_l_title; ?></a></h3>
                   <a class="thumbnail-h3" href="<?php echo $signature_centered_l_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_centered_l; ?>"></a>
@@ -950,7 +950,7 @@
             if( $signature_centered_image !== '' ) { ?>
             
             <div class="row">
-              <div class="col-md-4 col-md-offset-4">
+              <div class="col-md-4">
                 <div class="thumbnail signature-text-color">
                   <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_centered_image_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_centered_image_title; ?></a></h3>
                   <a class="thumbnail-h3" href="<?php echo $signature_centered_image_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_centered_image; ?>"></a>
