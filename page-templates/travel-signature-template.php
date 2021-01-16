@@ -221,11 +221,11 @@ if(get_post_meta(get_the_ID(), 'signature-travel-csel-checkbox', true) == 'yes')
 <?php endif; ?>
   
   <!-- ==== GRID SECTION #1-10 ==== -->
-  <div class="pt-1618 container-fluid signature_bg_color">
+  <div id="travel-sig-grid" class="pt-1618 container-fluid signature_bg_color">
 <?php
 if($signature_travel_section_1_title !== '') :?>
   <div class="row travel-signature-template-row">
-  <div class="col-md-4 one">
+  <div class="col-md-6 col-lg-4 one">
     <div class="thumbnail signature-text-color">
       <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_1_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_1_title; ?></a></h3>
       <a class="thumbnail-h3" href="<?php echo $signature_travel_section_1_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_1_image; ?>"></a>
@@ -241,7 +241,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   </div>
   <?php if($signature_travel_section_2_title !== '' || $signature_travel_2_image !== '' ) :?>
-    <div class="col-md-4 two">
+    <div class="col-md-6 col-lg-4 two">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_2_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_2_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_2_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_2_image; ?>"></a>
@@ -257,7 +257,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_3_title !== '' || $signature_travel_3_image !== '' ) : ?>
-    <div class="col-md-4 three">
+    <div class="col-md-6 col-lg-4 three">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_3_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_3_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_3_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_3_image; ?>"></a>
@@ -273,7 +273,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif; ?>
   <?php  if($signature_travel_section_4_title !== '' || $signature_travel_4_image !== '' ) : ?>
-    <div class="col-md-4 four">
+    <div class="col-md-6 col-lg-4 four">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_4_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_4_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_4_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_4_image; ?>"></a>
@@ -289,7 +289,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_5_title !== '' || $signature_travel_5_image !== '') : ?>
-    <div class="col-md-4 five">
+    <div class="col-md-6 col-lg-4 five">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_5_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_5_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_5_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_5_image; ?>"></a>
@@ -303,7 +303,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_6_title !== '' || $signature_travel_6_image  !== '') : ?>
-    <div class="col-md-4 six">
+    <div class="col-md-6 col-lg-4 six">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_6_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_6_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_6_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_6_image; ?>"></a>
@@ -319,7 +319,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_7_title !== '' || $signature_travel_7_image !== '') : ?>
-    <div class="col-md-4 seven">
+    <div class="col-md-6 col-lg-4 seven">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_7_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_7_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_7_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_7_image; ?>"></a>
@@ -333,7 +333,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_8_title !== '' || $signature_travel_8_image !== '') : ?>
-    <div class="col-md-4 eight">
+    <div class="col-md-6 col-lg-4 eight">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_8_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_8_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_8_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_8_image; ?>"></a>
@@ -349,7 +349,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_9_title !== '' || $signature_travel_9_image !== '') : ?>
-    <div class="col-md-4 nine">
+    <div class="col-md-6 col-lg-4 nine">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_9_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_9_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_9_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_9_image; ?>"></a>
@@ -363,7 +363,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_10_title !== '') : ?>
-    <div class="col-md-4 ten">
+    <div class="col-md-6 col-lg-4 ten">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_10_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_10_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_10_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_10_image; ?>"></a>
@@ -379,7 +379,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_11_title !== '' || $signature_travel_11_image !== '') : ?>
-    <div class="col-md-4 eleven">
+    <div class="col-md-6 col-lg-4 eleven">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_11_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_11_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_11_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_11_image; ?>"></a>
@@ -393,7 +393,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_12_title !== '') : ?>
-    <div class="col-md-4 tweleve">
+    <div class="col-md-6 col-lg-4 tweleve">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_12_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_12_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_12_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_12_image; ?>"></a>
@@ -407,7 +407,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if(get_post_meta($post->ID,'signature-travel-section-13-title',true)) : ?>
-    <div class="col-md-4 thirteen">
+    <div class="col-md-6 col-lg-4 thirteen">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_13_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_13_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_13_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_13_image; ?>"></a>
@@ -421,7 +421,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if(get_post_meta($post->ID,'signature-travel-section-14-title',true)) : ?>
-    <div class="col-md-4 fouteen">
+    <div class="col-md-6 col-lg-4 fouteen">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_14_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_14_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_14_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_14_image; ?>"></a>
@@ -435,7 +435,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if(get_post_meta($post->ID,'signature-travel-section-15-title',true)) : ?>
-    <div class="col-md-4 fifteen">
+    <div class="col-md-6 col-lg-4 fifteen">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_15_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_15_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_15_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_15_image; ?>"></a>
@@ -449,7 +449,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if(get_post_meta($post->ID,'signature-travel-section-16-title',true)) : ?>
-    <div class="col-md-4 sixteen">
+    <div class="col-md-6 col-lg-4 sixteen">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_16_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_16_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_16_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_16_image; ?>"></a>
@@ -463,7 +463,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if(get_post_meta($post->ID,'signature-travel-section-17-title',true)) : ?>
-    <div class="col-md-4 seventeen">
+    <div class="col-md-6 col-lg-4 seventeen">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_17_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_17_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_17_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_17_image; ?>"></a>
@@ -477,7 +477,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if(get_post_meta($post->ID,'signature-travel-section-18-title',true)) : ?>
-    <div class="col-md-4 eighteen">
+    <div class="col-md-6 col-lg-4 eighteen">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_18_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_18_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_18_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_18_image; ?>"></a>
@@ -491,7 +491,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if(get_post_meta($post->ID,'signature-travel-section-19-title',true)) : ?>
-    <div class="col-md-4 nineteen">
+    <div class="col-md-6 col-lg-4 nineteen">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_19_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_19_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_19_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_19_image; ?>"></a>
@@ -505,7 +505,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if(get_post_meta($post->ID,'signature-travel-section-20-title',true)) : ?>
-    <div class="col-md-4 twenty">
+    <div class="col-md-6 col-lg-4 twenty">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_20_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_20_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_20_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_20_image; ?>"></a>
@@ -519,7 +519,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if(get_post_meta($post->ID,'signature-travel-section-21-title',true)) : ?>
-    <div class="col-md-4 twentyone">
+    <div class="col-md-6 col-lg-4 twentyone">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_21_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_21_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_21_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_21_image; ?>"></a>
@@ -534,7 +534,7 @@ if($signature_travel_section_1_title !== '') :?>
   <?php endif;
   if(get_post_meta($post->ID,'signature-travel-section-22-title',true)) : ?>
     <div class="row">
-    <div class="col-md-4 twentytwo">
+    <div class="col-md-6 col-lg-4 twentytwo">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_22_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_22_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_22_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_22_image; ?>"></a>
@@ -548,7 +548,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if(get_post_meta($post->ID,'signature-travel-section-23-title',true)) : ?>
-    <div class="col-md-4 twentythree">
+    <div class="col-md-6 col-lg-4 twentythree">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_23_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_23_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_23_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_23_image; ?>"></a>
@@ -562,7 +562,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_24_title !== '' || $signature_travel_24_image !== '' ) : ?>
-    <div class="col-md-4 twentyfour">
+    <div class="col-md-6 col-lg-4 twentyfour">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_24_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_24_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_24_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_24_image; ?>"></a>
@@ -576,7 +576,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_25_title !== '' || $signature_travel_25_image !== '' ) : ?>
-    <div class="col-md-4 twentyfive">
+    <div class="col-md-6 col-lg-4 twentyfive">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_25_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_25_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_25_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_25_image; ?>"></a>
@@ -590,7 +590,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_26_title !== '' || $signature_travel_26_image !== '' ) :  ?>
-    <div class="col-md-4 twentysix">
+    <div class="col-md-6 col-lg-4 twentysix">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_26_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_26_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_26_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_26_image; ?>"></a>
@@ -604,7 +604,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_27_title !== '' || $signature_travel_27_image !== '' ) : ?>
-    <div class="col-md-4 twentyseven">
+    <div class="col-md-6 col-lg-4 twentyseven">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_27_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_27_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_27_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_27_image; ?>"></a>
@@ -618,7 +618,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_28_title !== '' || $signature_travel_28_image !== '' ) : ?>
-    <div class="col-md-4 twentyeight">
+    <div class="col-md-6 col-lg-4 twentyeight">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_28_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_28_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_28_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_28_image; ?>"></a>
@@ -632,7 +632,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_29_title !== '' || $signature_travel_29_image !== '' ) : ?>
-    <div class="col-md-4 twentynine">
+    <div class="col-md-6 col-lg-4 twentynine">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_29_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_29_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_29_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_29_image; ?>"></a>
@@ -646,7 +646,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_30_title !== '' || $signature_travel_30_image !== '' ) : ?>
-    <div class="col-md-4 thirty">
+    <div class="col-md-6 col-lg-4 thirty">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_30_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_30_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_30_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_30_image; ?>"></a>
@@ -660,7 +660,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_31_title !== '' || $signature_travel_31_image !== '' ) : ?>
-    <div class="col-md-4 thirtyone">
+    <div class="col-md-6 col-lg-4 thirtyone">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_31_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_31_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_31_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_31_image; ?>"></a>
@@ -674,7 +674,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_32_title !== '' || $signature_travel_32_image !== '' ) : ?>
-    <div class="col-md-4 thirtytwo">
+    <div class="col-md-6 col-lg-4 thirtytwo">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_32_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_32_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_32_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_32_image; ?>"></a>
@@ -688,7 +688,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_33_title !== '' || $signature_travel_33_image !== '' ) : ?>
-    <div class="col-md-4 thirtythree">
+    <div class="col-md-6 col-lg-4 thirtythree">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_33_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_33_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_33_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_33_image; ?>"></a>
@@ -702,7 +702,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_34_title !== '' || $signature_travel_34_image !== '' ) : ?>
-    <div class="col-md-4 thirtyfour">
+    <div class="col-md-6 col-lg-4 thirtyfour">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_34_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_34_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_34_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_34_image; ?>"></a>
@@ -716,7 +716,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_35_title !== '' || $signature_travel_35_image !== '' ) : ?>
-    <div class="col-md-4 thirtyfive">
+    <div class="col-md-6 col-lg-4 thirtyfive">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_35_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_35_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_35_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_35_image; ?>"></a>
@@ -730,7 +730,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_36_title !== '' || $signature_travel_36_image !== '' ) : ?>
-    <div class="col-md-4 thirtysix">
+    <div class="col-md-6 col-lg-4 thirtysix">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_36_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_36_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_36_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_36_image; ?>"></a>
@@ -744,7 +744,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_37_title !== '' || $signature_travel_37_image !== '' ) : ?>
-    <div class="col-md-4 thirtyseven">
+    <div class="col-md-6 col-lg-4 thirtyseven">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_37_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_37_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_37_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_37_image; ?>"></a>
@@ -758,7 +758,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_38_title !== '' || $signature_travel_38_image !== '' ) : ?>
-    <div class="col-md-4 thirtyeight">
+    <div class="col-md-6 col-lg-4 thirtyeight">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_38_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_38_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_38_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_38_image; ?>"></a>
@@ -772,7 +772,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_39_title !== '' || $signature_travel_39_image !== '' ) : ?>
-    <div class="col-md-4 thirtynine">
+    <div class="col-md-6 col-lg-4 thirtynine">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_39_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_39_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_39_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_39_image; ?>"></a>
@@ -786,7 +786,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_40_title !== '' || $signature_travel_40_image !== '' ) : ?>
-    <div class="col-md-4 fourty">
+    <div class="col-md-6 col-lg-4 fourty">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_40_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_40_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_40_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_40_image; ?>"></a>
@@ -800,7 +800,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_41_title !== '' || $signature_travel_41_image !== '' ) : ?>
-    <div class="col-md-4 fourtyone">
+    <div class="col-md-6 col-lg-4 fourtyone">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_41_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_41_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_41_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_41_image; ?>"></a>
@@ -814,7 +814,7 @@ if($signature_travel_section_1_title !== '') :?>
     </div>
   <?php endif;
   if($signature_travel_section_42_title !== '' || $signature_travel_42_image !== '' ) : ?>
-    <div class="col-md-4 fourtytwo">
+    <div class="col-md-6 col-lg-4 fourtytwo">
       <div class="thumbnail signature-text-color">
         <h3 class="widget-title"><a class="thumbnail-h3" href="<?php echo $signature_travel_section_42_title_link; ?>" target="_self" title="Signature Destination"><?php echo $signature_travel_section_42_title; ?></a></h3>
         <a class="thumbnail-h3" href="<?php echo $signature_travel_section_42_title_link; ?>" target="_self" title="Signature Destination"><img src="<?php echo $signature_travel_42_image; ?>"></a>

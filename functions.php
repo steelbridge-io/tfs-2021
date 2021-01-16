@@ -572,35 +572,19 @@ function new_excerpt_more($more) {
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
-/*function tfs_custom_excerpt_length( $length ) {
-  return 35;
-}
-add_filter( 'excerpt_length', 'tfs_custom_excerpt_length', 999 );*/
-
-
-//add_filter( 'excerpt_length', 'custom_excerpt_length' );
-
-/*function custom_excerpt_length( $length ) {
-	
-		$length = in_category( 'blog' ) ? '20' : '20';
-	
-		return $length;
-}*/
-	
-	
 	
 	function wpdocs_custom_excerpt_length( $length ) {
 		if ( is_page_template( 'page-templates/news-blog-template.php' ) ) {
 			return 30;
 		} else if ( !is_page_template('page-templates/news-blog-template.php') ) {
-			return 20;
+		    return 20;
 		} else {
 			return $length;
 		}
 	}
 	
 	add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
-
+	
 // Adds .html to pages
 add_action('init', 'html_page_permalink', -1);
 register_activation_hook(__FILE__, 'cvf_active');

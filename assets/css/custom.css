@@ -2467,6 +2467,15 @@ nav.navigation.post-navigation .polls.nav-previous .fa-chevron-left {
 
 /** SCSS for Travel Signature Template
 ----------------------------------------- */
+#travel-sig-grid .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+#travel-sig-grid .row > [class*=col-] {
+  display: flex;
+  flex-direction: column;
+}
+
 #travel-signature-template {
   background-color: #000000;
 }
