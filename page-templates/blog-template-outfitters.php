@@ -9,8 +9,8 @@
  */
 
 $outfitter_blogpost_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full');
-$outftter_post_default = get_bloginfo('template_directory') . '/images/default/TFSLogo.png';
-$outftter_blog_logo = get_theme_mod ('outfitters-logo');
+$outfitter_blog_logo = get_post_meta(get_the_ID(), 'outfitters-logo', true );
+$default_logo = get_theme_mod('default_page_logo');
 
 include_once('post-meta/post-meta-blog.php');
 
@@ -31,12 +31,10 @@ get_header();
       <div class="container">
   
         <dl class="landing-hd">
-          <?php if($outfitters_logo_meta !== '') { ?>
-            <dd class="dd-1"><img src="<?php echo $outfitters_logo_meta; ?>" class="img-responsive-logo" alt="" title=""></dd>
-          <?php } elseif($outftter_blog_logo !== '') { ?>
-            <dd class="dd-1"><img src="<?php echo $outftter_blog_logo; ?>" class="img-responsive-logo" alt="" title=""></dd>
+          <?php if($outfitter_blog_logo !== '') { ?>
+            <dd class="dd-1"><img src="<?php echo $outfitter_blog_logo; ?>" class="img-responsive-logo" alt="" title=""></dd>
           <?php } else { ?>
-            <dd class="dd-1"><img src="<?php echo $outftter_post_default; ?>" class="img-responsive-logo" alt="" title=""></dd>
+            <dd class="dd-1"><img src="<?php echo $default_logo; ?>" class="img-responsive-logo" alt="" title=""></dd>
           <?php } ?>
           <dd class="dd-2"><h2 class="logo-tel text-center outfitters"><?php echo get_the_title(); ?></h2></dd>
           <?php if ( get_post_meta($post->ID, 'signature-description', true) )
