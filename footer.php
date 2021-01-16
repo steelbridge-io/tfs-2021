@@ -24,17 +24,19 @@
       <div class="row">
         <div class="col-xs-12">
 
-        <div class="instagram-content">
+      <!--  #### Instagram Feed Removed 1/16/21
+      
+      <div class="instagram-content">
         <h2>Latest Photos <a href="https://www.instagram.com/esblodge/" target="_blank" class="icon icons fa-instagram"><span class="label">Instagram</span></a> on Instagram</h2>
         <div class="row photos-wrap">
           
-          <!-- Instafeed target div -->
+         
           <div id="instafeed">
-            <?php echo do_shortcode('[elfsight_instagram_feed id="1"]'); ?>
+            do_shortcode('[elfsight_instagram_feed id="1"]'); ?>
           </div>
           
         </div>
-        </div>
+        </div>  -->
         
         </div>
       </div>

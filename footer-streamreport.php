@@ -131,7 +131,7 @@
 
 <footer id="footer">
   <!-- ========= INSTAGRAM FEED ========== -->
-  <div class="container-fluid">
+  <!-- <div class="container-fluid">
     <section class="instagram-wrap">
       <div class="container-fluid">
         <div class="row">
@@ -140,7 +140,7 @@
             <div class="instagram-content">
               <h2 class="mb-1618">Latest Photos <a href="https://www.instagram.com/esblodge/" target="_blank" class="icon icons fa-instagram"><span class="label">Instagram</span></a> on Instagram</h2>
               <div class="row photos-wrap">
-                <!-- Instafeed target div -->
+                
                 <div id="instafeed"></div>
               </div>
             </div>
@@ -149,7 +149,7 @@
         </div>
       </div>
     </section>
-  </div>
+  </div> -->
 
   <!-- ==== FOOTER CONTENT ==== -->
 
