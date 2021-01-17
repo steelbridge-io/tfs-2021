@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The sidebar containing the main widget area.
+ * The sidebar containing the main widget area Sidebar Lower 48.
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *

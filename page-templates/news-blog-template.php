@@ -7,7 +7,36 @@
 	 * Author: Chris Parsons
 	 * Author URL: https://steelbridge.io
 	 */
+	$newstemplate_blog_logo = get_post_meta(get_the_ID(), 'news-template-logo', true );
+	$default_logo = get_theme_mod('default_page_logo');
 	get_header(); ?>
+  
+  <div id="news-blog-hero-image" class="inner">
+		<?php
+			$jumbotronImage_newstemplate = get_the_post_thumbnail_url($post->ID, 'full');
+		
+		?>
+    <div id="outfitters-jumbotron" class="outfitters jumbotron">
+      <img class="img-responsive outfitters" src="<?php echo $jumbotronImage_newstemplate ?>" alt="">
+      <div class="container">
+        
+        <dl class="landing-hd">
+					<?php if($newstemplate_blog_logo !== '') { ?>
+            <dd class="dd-1"><img src="<?php echo $newstemplate_blog_logo; ?>" class="img-responsive-logo" alt="" title=""></dd>
+					<?php } else { ?>
+            <dd class="dd-1"><img src="<?php echo $default_logo; ?>" class="img-responsive-logo" alt="" title=""></dd>
+					<?php } ?>
+          <dd class="dd-2"><h2 class="logo-tel text-center outfitters"><?php echo get_the_title(); ?></h2></dd>
+					<?php if ( get_post_meta($post->ID, 'signature-description', true) )
+						echo '<dd class="dd-3"><p class="template-description text-center outfitters">' . $basic_page_description . '</p></dd>' ?>
+          <dd class="dd-4"><h3 class="logo-tel text-center outfitters"><a href="tel:18006693474">800 &bull; 669 &bull; 3474</a></h3></dd>
+        </dl>
+      
+      </div>
+    </div>
+  </div>
+  
+  
   
   <div id="news-header" class="container-fluid featured-post">
     
@@ -405,7 +434,9 @@
       
       </div>
       <div class="col-lg-3">
-      <?php get_sidebar(); ?>
+      <?php
+        $selectsidebar = get_post_meta(get_the_ID(), 'news-template-select-sidebar', true);
+        get_sidebar($selectsidebar); ?>
       </div>
     </div>
   </div>
