@@ -5397,6 +5397,7 @@ a.badge:hover, a.badge:focus {
   position: relative;
   z-index: 1;
   padding: 0;
+  width: 100%;
 }
 #outfitters-jumbotron.outfitters.jumbotron .container {
   position: absolute;
