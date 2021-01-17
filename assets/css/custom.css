@@ -2778,5 +2778,10 @@ div.ctct-form-embed form.ctct-form-custom label.ctct-form-label {
     justify-content: center;
   }
 }
+/** SCSS reCaptcha
+===================== */
+.grecaptcha-badge {
+  visibility: hidden;
+}
 
 /*# sourceMappingURL=custom.css.map */
