@@ -1,7 +1,34 @@
 /** SCSS Signature Template
 ============================== */
-@media (min-width: 991px) {
+#s3 {
+  .dd-2 {
+    h2.logo-tel {
+      font-size: calc( 16px + (24 - 16)*(100vw - 400px)/(800 - 400)); ;
+    }
+  }
+}
 
+.signature-template {
+  #main {
+    #banner {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      min-height: auto;
+
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
   .adventures-template-signature-template {
     #primary {
       .signature_bg_color {
@@ -12,6 +39,51 @@
       }
     }
   }
-
+  .signature-template {
+    #main {
+      #banner {
+        min-height: 35em !important;
+      }
+    }
+  }
 }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  .signature-template {
+    #main {
+      #banner {
+        min-height: 24em !important;
+        .template-header {
+          .img-responsive-width-100 {
+            height: 24em;
+            object-fit: cover;
+          }
+          .template-header-content {
+            .signature-header {
+              .scrollto {
+                margin-top: 8em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {}
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {}
 

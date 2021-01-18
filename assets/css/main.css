@@ -3638,8 +3638,8 @@ body.is-menu-visible #menu {
         font-size: 1.25em; }
       #banner br {
         display: none; }
-      #banner .more {
-        display: none; } }
+      /*#banner .more {
+        display: none; }*/ }
 
 body.is-loading #banner h2, body.is-loading #basic-scrolly h2 {
   -moz-transform: scale(0.95);

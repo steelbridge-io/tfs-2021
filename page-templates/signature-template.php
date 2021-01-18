@@ -18,60 +18,46 @@
   
   </div> <!-- /.container-fluid. Opening tag found in header.php-->
   
-  <div id="primary" class="content-area" style="position: relative;">
+  <div id="primary" class="content-area signature-template" style="position: relative;">
   <div id="main" role="main">
     
     <?php if ( has_post_thumbnail() ) : ?>
     
     <!--<header class="parallax-window center-content-flex" data-parallax="scroll" data-image-src="< //echo $the_post_img['0']; ?>">-->
     <!--<header class="parallax-window center-content-flex" style="background-image: url(' echo $the_post_img['0']; ?>'); background-size:cover;">-->
-    
+  
+  
+    <section id="banner">
     <div class="template-header">
-      
       <img src="<?php echo $the_post_img['0']; ?>" class="paralaxed img-responsive-width-100 center-block">
       
       <div class="center-content-flex template-header-content">
         <div class="basicpagelogo signature-header template-class text-center">
-          
           <div class="inner">
             <dl class="landing-hd">
               <dd class="dd-1"><img src="<?php echo $sig_logo; ?>" class="img-responsive-logo" alt="The Fly Shop Logo" title="Basic Logo"></dd>
 
               <div id="s3">
-
                 <dd class="dd-2">
-
                   <h2 class="logo-tel"><?php echo get_the_title(); ?></h2>
                   <h3 class="logo-tel"><a href="tel:18006693474">800 &bull; 669 &bull; 3474</a></h3>
-
                 </dd>
               
                 <?php if ( get_post_meta($post->ID, 'signature-description', true) ) echo '<dd class="dd-3"><p class="template-description">' . $signature_description . '</p></dd>'; ?>
 
-                <a href="#scrollto" class="cycle template more">Learn More</a>
-
               </div>
-              <div id="s4">
-
-                <dd class="dd-2"><h2 class="logo-tel"><?php echo get_the_title(); ?></h2></dd>
-
-                  <?php if ( get_post_meta($post->ID, 'signature-description', true) )
-                    echo '<dd class="dd-3"><p class="template-description">' . $signature_description . '</p></dd>' ?>
-
-                <dd class="dd-4"><h3 class="logo-tel"><a href="tel:18006693474">800 &bull; 669 &bull; 3474</a></h3></dd>
-
-              </div>
-
-          </dl>
+            </dl>
           </div>
-
-            <div class="scrollto animated animatedFadeInUp fadeInUp">
-              <a href="#scrollto" class="template more">Learn More</a>
-            </div>
+          
+          <div class="scrollto animated animatedFadeInUp fadeInUp">
+            <a href="#scrollto" class="template more">Learn More</a>
+          </div>
 
         </div>
       </div>
     </div>
+   </section>
+   
       
       <?php else: ?>
         

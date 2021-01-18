@@ -1242,7 +1242,8 @@ nav#nav {
   z-index: 100;
   top: 60%;
   text-align: center;
-  width: 100%; }
+  width: 100%;
+  margin-top: 10em; }
 
 .template.more:after {
   background-image: url("images/arrow.svg");
@@ -1761,12 +1762,6 @@ nav.navigation.post-navigation .polls.nav-previous {
     font-size: 1rem !important;
     line-height: 27px !important;
     margin-top: 0.618em !important; } }
-@media (min-width: 736px) {
-  #s3 {
-    display: none; } }
-@media (max-width: 735px) {
-  #s4, .scrollto.animated.animatedFadeInUp.fadeInUp {
-    display: none; } }
 @media (max-width: 600px) {
   .photo-box .image-wrap img {
     zoom: 20.777%; }
@@ -2272,10 +2267,31 @@ div.ctct-form-embed form.ctct-form-custom label.ctct-form-label {
 } */
 /** SCSS Signature Template
 ============================== */
-@media (min-width: 991px) {
+#s3 .dd-2 h2.logo-tel {
+  font-size: calc( 16px + (24 - 16)*(100vw - 400px)/(800 - 400)); }
+
+.signature-template #main #banner {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  min-height: auto; }
+
+@media (min-width: 992px) {
   .adventures-template-signature-template #primary .signature_bg_color .row {
     display: flex;
-    justify-content: center; } }
+    justify-content: center; }
+
+  .signature-template #main #banner {
+    min-height: 35em !important; } }
+@media (max-width: 991.98px) {
+  .signature-template #main #banner {
+    min-height: 24em !important; }
+    .signature-template #main #banner .template-header .img-responsive-width-100 {
+      height: 24em;
+      object-fit: cover; }
+    .signature-template #main #banner .template-header .template-header-content .signature-header .scrollto {
+      margin-top: 8em; } }
 /** SCSS reCaptcha
 ===================== */
 .grecaptcha-badge {

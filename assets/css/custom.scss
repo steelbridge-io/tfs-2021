@@ -1351,6 +1351,7 @@ nav#nav {
   top: 60%;
   text-align: center;
   width: 100%;
+  margin-top: 10em;
 }
 .template.more:after {
   background-image: url("images/arrow.svg");
@@ -2033,18 +2034,6 @@ nav.navigation.post-navigation {
 @media ( max-width: 768px ) {
 
 }
-@media (min-width: 736px ) {
-  #s3 {
-    display: none;
-  }
-}
-@media (max-width: 735px ) {
-  #s4, .scrollto.animated.animatedFadeInUp.fadeInUp {
-    display: none;
-  }
-}
-
-
 @media (max-width: 600px) {
 
   .photo-box .image-wrap img {

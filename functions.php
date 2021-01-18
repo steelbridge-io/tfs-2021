@@ -338,7 +338,7 @@ function the_fly_shop_scripts() {
 
     wp_enqueue_style( 'the-fly-shop-ie8', get_template_directory_uri() . '/assets/css/ie8.css', array(), '20161116', 'all' );
 
-    wp_enqueue_style( 'the-fly-shop-main-style', get_template_directory_uri() . '/assets/sass/main.css', array(),  '20161116', 'all' );
+    wp_enqueue_style( 'the-fly-shop-main-style', get_template_directory_uri() . '/assets/css/main.css', array(),  '20161116', 'all' );
 
     wp_enqueue_style( 'the-fly-shop-custom-style', get_template_directory_uri() . '/assets/css/custom.css', array(), '20161116', 'all' );
     
