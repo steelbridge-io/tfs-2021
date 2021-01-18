@@ -19,8 +19,12 @@ get_header();
 			the_post();
 
 			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation();
+			
+            the_post_navigation( array(
+              'prev_text'                  => __( '<span class="post-nav"><i class="fas fa-2x fa-chevron-left"></i>&nbsp;prev post: %title</span>' ),
+              'next_text'                  => __( '<span class="post-nav">next post: %title&nbsp;<i class="fas fa-2x fa-chevron-right"></i></span>' ),
+              'screen_reader_text' => __( 'Continue Reading' ),
+            ) );
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
