@@ -7,14 +7,16 @@
 	 * Author: Chris Parsons
 	 * Author URL: https://steelbridge.io
 	 */
+    global $post;
 	$newstemplate_blog_logo = get_post_meta(get_the_ID(), 'news-template-logo', true );
 	$default_logo = get_theme_mod('default_page_logo');
+	$newstemplate_description = get_post_meta($post->ID, 'news-template-description', true );
+	
 	get_header(); ?>
   
   <div id="news-blog-hero-image" class="inner">
 		<?php
 			$jumbotronImage_newstemplate = get_the_post_thumbnail_url($post->ID, 'full');
-		
 		?>
     <div id="outfitters-jumbotron" class="outfitters jumbotron">
       <img class="img-responsive outfitters" src="<?php echo $jumbotronImage_newstemplate ?>" alt="">
@@ -27,16 +29,14 @@
             <dd class="dd-1"><img src="<?php echo $default_logo; ?>" class="img-responsive-logo" alt="" title=""></dd>
 					<?php } ?>
           <dd class="dd-2"><h2 class="logo-tel text-center outfitters"><?php echo get_the_title(); ?></h2></dd>
-					<?php if ( get_post_meta($post->ID, 'signature-description', true) )
-						echo '<dd class="dd-3"><p class="template-description text-center outfitters">' . $basic_page_description . '</p></dd>' ?>
+					<?php if ( get_post_meta($post->ID, 'news-template-description', true) )
+						echo '<dd class="dd-3"><p class="template-description text-center newstemplate-description">' . $newstemplate_description . '</p></dd>' ?>
           <dd class="dd-4"><h3 class="logo-tel text-center outfitters"><a href="tel:18006693474">800 &bull; 669 &bull; 3474</a></h3></dd>
         </dl>
       
       </div>
     </div>
   </div>
-  
-  
   
   <div id="news-header" class="container-fluid featured-post">
     
@@ -47,8 +47,9 @@
       <div class="panel-body">
         <div class="row">
           <?php
+            $selectpost = get_post_meta(get_the_ID(), 'news-template-select-post', true);
             $top_options = array(
-                'post_type' => 'post',
+                'post_type' => $selectpost,
                 'posts_per_page'  => 1,
             );
             $top_query  = new WP_Query($top_options);
