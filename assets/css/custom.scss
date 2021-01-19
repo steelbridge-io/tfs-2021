@@ -1338,11 +1338,11 @@ nav#nav {
 /* Scroll To ID
 -------------------------------- */
 .scrollto a {
-  color: var(--dark-white);
+  color: #f5f5f5;
   text-decoration: none;
 
   & :hover {
-    color: var(--dark-white);
+    color: #f5f5f5;
     text-decoration: none;
   }
 }
@@ -2089,7 +2089,6 @@ nav.navigation.post-navigation {
 @import 'supports/new-blog-template';
 @import 'supports/news-blog-template';
 @import 'supports/front-page';
-@import 'supports/travel-signature-template';
 @import 'supports/taxonomy-archive';
 @import 'supports/content';
 @import 'supports/margin-padding';
@@ -2099,7 +2098,7 @@ nav.navigation.post-navigation {
 @import 'supports/forms';
 @import 'supports/widgets';
 @import 'supports/global';
-@import 'supports/signature-template';
+@import 'supports/signature-templates';
 @import 'supports/recaptcha';
 @import 'supports/default-template';
 
