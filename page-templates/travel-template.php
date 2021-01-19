@@ -11,7 +11,7 @@ include_once('post-meta/post-meta-travel.php'); // Includes all the custom meta-
 
 get_header();?>
 <!-- Banner -->
-<section id="banner">
+<section id="banner" class="travel-template-banner">
   <div class="inner">
     <img src="<?php echo $travel_logo;?>" class="img-responsive center-block" alt="The Fly Shop Signature Travel Destination">
     
