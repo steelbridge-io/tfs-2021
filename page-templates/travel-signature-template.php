@@ -18,11 +18,12 @@ get_header(); ?>
   
   </div> <!-- /.container-fluid. Opening tag found in header.php-->
   
-  <div id="primary" class="content-area" style="position: relative;">
+  <div id="primary" class="content-area signature-template" style="position: relative;">
   <div id="main" role="main">
 
 <?php if ( has_post_thumbnail() ) : ?>
   
+  <section id="banner">
   <div class="template-header">
     
     <img src="<?php echo $the_post_img['0']; ?>" class="paralaxed img-responsive-width-100 center-block">
@@ -51,6 +52,7 @@ get_header(); ?>
       </div>
     </div>
   </div>
+  </section>
 
 <?php else: ?>
   
