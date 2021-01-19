@@ -35,14 +35,16 @@ get_header(); ?>
           <dl class="landing-hd">
             <?php if ( get_post_meta($post->ID, 'signature-travel-logo', true) )
             { echo '<dd class="dd-1"><img src="' . $sig_travel_logo . '" class="img-responsive-logo" alt="The Fly Shop Logo" title="Basic Logo"></dd>'; } ?>
-            <div id="s4">
-              
-              <dd class="dd-2"><h2 class="logo-tel"><?php echo get_the_title(); ?></h2></dd>
+            
+            <div id="s3">
+              <dd class="dd-2">
+                <h2 class="logo-tel"><?php echo get_the_title(); ?></h2>
+                <h3 class="logo-tel"><a href="tel:18006693474">800 &bull; 669 &bull; 3474</a></h3>
+              </dd>
               
               <?php if ( get_post_meta($post->ID, 'signature-travel-description', true) )
               { echo '<dd class="dd-3"><p class="template-description">' . $signature_travel_description . '</p></dd>'; } ?>
               
-              <dd class="dd-4"><h3 class="logo-tel"><a href="tel:18006693474">800 &bull; 669 &bull; 3474</a></h3></dd>
             </div>
           </dl>
         </div>
