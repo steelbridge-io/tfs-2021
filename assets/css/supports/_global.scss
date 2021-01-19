@@ -1,5 +1,8 @@
 /** SCSS Global Properties
 =========================== */
+body {
+  overflow: auto;
+}
 
 #scrollto {
   color: $white;
