@@ -217,7 +217,7 @@ function stopColor() {
     clearInterval(myVar);
 }*/
 
-$("#s3").cycle({ fx: 'fade', speed:  2500 });
+/*$("#s3").cycle({ fx: 'fade', speed:  2500 });*/
 
 
 // Adds a prompt to add iCal per the submit-iCal icon found in the events list
