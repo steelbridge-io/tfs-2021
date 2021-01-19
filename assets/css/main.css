@@ -3580,7 +3580,6 @@ body.is-menu-visible #menu {
     transform: translateY(0);
     border: none;
     bottom: 0;
-    color: inherit;
     font-size: 0.8em;
     height: 8.5em;
     left: 50%;
@@ -4107,5 +4106,3 @@ body.is-mobile.landing .wrapper.style4 {
   background-size: cover; }
 body.is-mobile.landing #footer {
   background-color: #1d242a; }
-
-/*# sourceMappingURL=main.css.map */
