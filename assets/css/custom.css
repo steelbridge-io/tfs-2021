@@ -1884,6 +1884,64 @@ nav.navigation.post-navigation .polls.nav-previous {
 
 /** News Blog Template
 ========================== */
+#collapse-news-archive-one .well,
+#collapse-news-archive-two .well,
+#collapse-news-archive-three .well,
+#collapse-news-archive-four .well {
+  background-color: #eeeeee; }
+  #collapse-news-archive-one .well .row,
+  #collapse-news-archive-two .well .row,
+  #collapse-news-archive-three .well .row,
+  #collapse-news-archive-four .well .row {
+    display: flex;
+    flex-wrap: wrap; }
+  #collapse-news-archive-one .well .row > [class*='col-'],
+  #collapse-news-archive-two .well .row > [class*='col-'],
+  #collapse-news-archive-three .well .row > [class*='col-'],
+  #collapse-news-archive-four .well .row > [class*='col-'] {
+    display: flex;
+    flex-direction: column; }
+
+.featured-caption h3 {
+  margin: 0 0 .3em 0; }
+.featured-caption p {
+  margin: 0 0 .6em 0; }
+.featured-caption a {
+  text-decoration: none; }
+.featured-caption p a {
+  color: #a01624;
+  text-decoration: none; }
+.featured-caption .author-date.featured .the-author {
+  font-size: 1rem;
+  margin: 0 .3em;
+  font-weight: 800;
+  color: #7F7E7A; }
+.featured-caption .author-date.featured .the-date {
+  font-size: 1rem;
+  margin: 0 .3em;
+  font-weight: 800;
+  color: #7F7E7A; }
+
+.caption a {
+  text-decoration: none; }
+.caption h4 {
+  margin: 0 0 .5em 0; }
+.caption p a {
+  color: #a01624;
+  text-decoration: none; }
+.caption .author-date {
+  margin: 0 0 .5em 0; }
+  .caption .author-date .the-author {
+    font-size: 0.8rem;
+    margin: 0 .3em;
+    font-weight: 800;
+    color: #7F7E7A; }
+  .caption .author-date .the-date {
+    font-size: 0.8rem;
+    margin: 0;
+    font-weight: 800;
+    color: #7F7E7A; }
+
 .newstemplate-description {
   color: #f5f5f5;
   text-align: center;
@@ -1912,6 +1970,15 @@ nav.navigation.post-navigation .polls.nav-previous {
 .container-fluid.featured-post {
   padding-left: 35px;
   padding-right: 35px; }
+  .container-fluid.featured-post .panel.panel-default {
+    border: none;
+    background-color: transparent;
+    box-shadow: none; }
+    .container-fluid.featured-post .panel.panel-default .panel-body .row {
+      display: flex;
+      align-items: center; }
+      .container-fluid.featured-post .panel.panel-default .panel-body .row .featured-caption h1 {
+        margin: 0 0 0.5em 0; }
 
 #news-blog-template {
   padding-bottom: 5.618em !important; }
@@ -1923,17 +1990,18 @@ nav.navigation.post-navigation .polls.nav-previous {
     background-color: transparent;
     border: none;
     box-shadow: none;
-    margin-bottom: 0; }
+    /*margin-bottom: 2.618em;*/ }
     #news-blog-template .panel.panel-default h2 {
       font-size: 1rem; }
     #news-blog-template .panel.panel-default h3 {
       font-size: 1.8rem; }
+  #news-blog-template .section-margin {
+    margin: 5.618em 0 0 0; }
   #news-blog-template .panel-body {
     background-color: transparent;
     border: none;
     padding: 0 15px; }
     #news-blog-template .panel-body .row {
-      margin-top: 5.618em;
       align-items: center; }
   #news-blog-template .col-6 {
     width: 48%;
@@ -1968,7 +2036,7 @@ nav.navigation.post-navigation .polls.nav-previous {
   margin-right: -15px;
   padding: 0; }
 .page-template-news-blog-template #news-blog-template img.img-responsive {
-  height: 438px;
+  height: 361px;
   width: 100%;
   object-fit: cover; }
 
@@ -1987,7 +2055,13 @@ nav.navigation.post-navigation .polls.nav-previous {
     margin: 1.618em 0 0;
     padding: 0; }
 
+.thumbnail a .img-responsive.collapse-grid {
+  height: 200px !important; }
+
 @media (max-width: 1199.98px) {
+  .sidebar {
+    margin-top: 2.618em; }
+
   #news-header {
     margin: 3.618em auto; }
     #news-header .row {
@@ -1998,6 +2072,10 @@ nav.navigation.post-navigation .polls.nav-previous {
         width: 100%;
         object-fit: initial;
         height: auto; } }
+@media (max-width: 991.98px) {
+  .container-fluid.featured-post .panel.panel-default .panel-body .row {
+    display: initial;
+    align-items: initial; } }
 /* Front Page SCSS
 ----------------------------------------------------- */
 .nc-fly-fishing-news {
