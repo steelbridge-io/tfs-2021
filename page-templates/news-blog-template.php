@@ -61,9 +61,9 @@
                 $top_permalink = get_post_permalink();
                 $top_title = get_the_title();
       
-                echo '<div class="col-md-4">' .
+                echo '<div class="col-md-4 featured-caption">' .
                      '<h1>'. $top_title .'</h1>';
-                echo '<p></p><span class="the-author">by:&nbsp;' . get_the_author() .'</span>&nbsp;<span class="the-date">'. get_the_date() .'</span></p>';
+                echo '<p class="author-date featured"><span class="the-author">by: '.get_the_author().'</span> <span class="the-date">'.get_the_date().'</span></p>';
                       the_excerpt(__('(more…)'));
                 echo '</div>';
                 
@@ -106,14 +106,14 @@
           $news_permalink = get_post_permalink();
           $news_title = get_the_title();
           
-          echo '<div class="col-md-6">' .
+          echo '<div class="col-md-6 featured-image">' .
                '<a href="'.$news_permalink .'" title="'. $news_title .'"><img class="img-responsive" src="' . $news_img_url . '" alt="' . $alt_news . '"></a>' .
                '</div>' .
-               '<div class="col-md-6">' .
+               '<div class="col-md-6 featured-caption">' .
                '<h2>The Fly Shop News</h2>' .
                '<a href="'. $news_permalink .'" title="'. $news_title .'"><h3>' . $news_title . '</h3></a>';
           
-          echo '<p class="author-date"><span class="the-author">by:&nbsp;' . get_the_author() .'</span>&nbsp;<span class="the-date">'. get_the_date() .'</span></p>';
+          echo '<p class="author-date featured"><span class="the-author">by: '. get_the_author() .'</span> <span class="the-date">'. get_the_date() .'</span></p>';
           
           the_excerpt(__('(more…)'));
           
@@ -154,14 +154,18 @@
           $news_permalink = get_post_permalink();
           $news_title = get_the_title();
           
-          echo '<div class="col-md-6">' .
-               '<a href="'.$news_permalink .'" title="'. $news_title .'"><img class="img-responsive" src="' . $news_img_url . '" alt="' . $alt_news . '"></a>' .
+          echo '<div class="col-sm-6 col-md-4 featured">' .
+               '<div class="thumbnail">' .
+               '<a href="'.$news_permalink .'" title="'. $news_title .'"><img class="img-responsive collapse-grid" src="' . $news_img_url . '" alt="' . $alt_news . '"></a>' .
+               '</div>' .
+               '<div class="caption">' .
                '<a href="'. $news_permalink .'" title="'. $news_title .'"><h4>' . $news_title . '</h4></a>';
-          echo '<p class="author-date"><span class="the-author">by:&nbsp;' . get_the_author() .'</span>&nbsp;<span class="the-date">'. get_the_date() .'</span></p>';
+          echo '<p class="author-date"><span class="the-author">by: '.get_the_author().'</span> <span class="the-date">'.get_the_date().'</span></p>';
                 
                 the_excerpt(__('(more…)'));
                 
-          echo '</div>';
+          echo '</div>' .
+          '</div>';
           
           endwhile;
           wp_reset_postdata(); ?>
@@ -174,7 +178,7 @@
       $hasposts_travelblog = get_posts('post_type=travel-blog');
       if(!empty($hasposts_travelblog)) { ?>
       
-      <div class="panel panel-default">
+      <div class="panel panel-default section-margin">
         <div class="panel-body">
           <div class="row">
           
@@ -194,13 +198,13 @@
           $travel_permalink = get_post_permalink();
           $travel_title = get_the_title();
           
-          echo '<div class="col-md-6">' .
+          echo '<div class="col-md-6 featured-image">' .
                '<a href="'. $travel_permalink .'" title="'. $travel_title .'"><img class="img-responsive" src="' . $travel_img_url . '" alt="' . $alt_travel . '">' .
                '</div>' .
-               '<div class="col-md-6">' .
+               '<div class="col-md-6 featured-caption">' .
                '<h2>Travel News</h2>' .
                '<a href="'. $travel_permalink .'" title="'. $travel_title .'"><h3>' . $travel_title . '</h3></a>';
-          echo '<p class="author-date"><span class="the-author">by:&nbsp;' . get_the_author() .'</span>&nbsp;<span class="the-date">'. get_the_date() .'</span></p>';
+          echo '<p class="author-date featured"><span class="the-author">by: '. get_the_author() .'</span> <span class="the-date">'. get_the_date() .'</span></p>';
           
           the_excerpt(__('(more…)'));
           
@@ -241,14 +245,18 @@
           $travel_collapse_permalink = get_post_permalink();
           $travel_collapse_title = get_the_title();
           
-          echo '<div class="col-md-6">' .
-               '<a href="'.$travel_collapse_permalink .'" title="'. $travel_collapse_title .'"><img class="img-responsive" src="' . $travel_collapse_img_url . '" alt="' . $alt_travel_collapse . '"></a>' .
+          echo '<div class="col-sm-6 col-md-4 featured">' .
+               '<div class="thumbnail">' .
+               '<a href="'.$travel_collapse_permalink .'" title="'. $travel_collapse_title .'"><img class="img-responsive collapse-grid" src="' . $travel_collapse_img_url . '" alt="' . $alt_travel_collapse . '"></a>' .
+               '</div>' .
+               '<div class="caption">' .
                '<a href="'. $travel_collapse_permalink .'" title="'. $travel_collapse_title .'"><h4>' . $travel_collapse_title . '</h4></a>';
-          echo '<p class="author-date"><span class="the-author">by:&nbsp;' . get_the_author() .'</span>&nbsp;<span class="the-date">'. get_the_date() .'</span></p>';
+          echo '<p class="author-date"><span class="the-author">by: ' . get_the_author() .'</span> <span class="the-date">'. get_the_date() .'</span></p>';
           
           the_excerpt(__('(more…)'));
           
-          echo '</div>';
+          echo '</div>' .
+          '</div>';
           
           endwhile;
           wp_reset_postdata(); ?>
@@ -261,7 +269,7 @@
       $hasposts_lower48blog = get_posts('post_type=lower48blog');
       if(!empty($hasposts_lower48blog)) { ?>
       
-      <div class="panel panel-default">
+      <div class="panel panel-default section-margin">
         <div class="panel-body">
           <div class="row">
           <?php
@@ -280,13 +288,13 @@
           $l48_permalink = get_post_permalink();
           $l48_title = get_the_title();
           
-          echo '<div class="col-md-6">' .
+          echo '<div class="col-md-6 featured-image">' .
                '<a href="'. $l48_permalink .'" title="'. $l48_title .'"><img class="img-responsive" src="' . $l48_img_url . '" alt="' . $alt_l48 . '">' .
                '</div>' .
-               '<div class="col-md-6">' .
+               '<div class="col-md-6 featured-caption">' .
                '<h2>Travel News</h2>' .
                '<a href="'. $l48_permalink .'" title="'. $l48_title .'"><h3>' . $l48_title . '</h3></a>';
-          echo '<p class="author-date"><span class="the-author">by:&nbsp;' . get_the_author() .'</span>&nbsp;<span class="the-date">'. get_the_date() .'</span></p>';
+          echo '<p class="author-date featured"><span class="the-author">by: ' . get_the_author() .'</span> <span class="the-date">'. get_the_date() .'</span></p>';
           
           the_excerpt(__('(more…)'));
           
@@ -327,14 +335,18 @@
           $l48_permalink = get_post_permalink();
           $l48_title = get_the_title();
           
-          echo '<div class="col-md-6">' .
-               '<a href="'.$l48_permalink .'" title="'. $l48_title .'"><img class="img-responsive" src="' . $l48_img_url . '" alt="' . $alt_l48 . '"></a>' .
+          echo '<div class="col-sm-6 col-md-4 featured">' .
+               '<div class="thumbnail">' .
+               '<a href="'.$l48_permalink .'" title="'. $l48_title .'"><img class="img-responsive collapse-grid" src="' . $l48_img_url . '" alt="' . $alt_l48 . '"></a>' .
+               '</div>' .
+               '<div class="caption">' .
                '<a href="'. $l48_permalink .'" title="'. $l48_title .'"><h4>' . $l48_title . '</h4></a>';
-          echo '<p class="author-date"><span class="the-author">by:&nbsp;' . get_the_author() .'</span>&nbsp;<span class="the-date">'. get_the_date() .'</span></p>';
+          echo '<p class="author-date"><span class="the-author">by: ' . get_the_author() .'</span> <span class="the-date">'. get_the_date() .'</span></p>';
           
           the_excerpt(__('(more…)'));
           
-          echo '</div>';
+          echo '</div>' .
+          '</div>';
           
           endwhile;
           wp_reset_postdata(); ?>
@@ -347,7 +359,7 @@
         $hasposts_flyfishing_news = get_posts('post_type=flyfishing-news');
         if(!empty($hasposts_flyfishing_news)) { ?>
       
-      <div class="panel panel-default">
+      <div class="panel panel-default section-margin">
         <div class="panel-body">
           <div class="row">
           
@@ -367,13 +379,13 @@
           $outfitters_permalink = get_post_permalink();
           $outfitters_title = get_the_title();
           
-          echo '<div class="col-md-6">' .
+          echo '<div class="col-md-6 featured-image">' .
                '<a href="'. $outfitters_permalink .'" title="'. $outfitters_title .'"><img class="img-responsive" src="' . $outfitters_img_url . '" alt="' . $alt_outfitters . '">' .
                '</div>' .
-               '<div class="col-md-6">' .
+               '<div class="col-md-6 featured-caption">' .
                '<h2>Outfitters News</h2>' .
                '<a href="'. $outfitters_permalink .'" title="'. $outfitters_title .'"><h3>' . $outfitters_title . '</h3></a>';
-          echo '<p class="author-date"><span class="the-author">by:&nbsp;' . get_the_author() .'</span>&nbsp;<span class="the-date">'. get_the_date() .'</span></p>';
+          echo '<p class="author-date featured"><span class="the-author">by: ' . get_the_author() .'</span> <span class="the-date">'. get_the_date() .'</span></p>';
           
           the_excerpt(__('(more…)'));
           
@@ -414,14 +426,18 @@
           $outfitters_permalink = get_post_permalink();
           $outfitters_title = get_the_title();
           
-          echo '<div class="col-md-6">' .
-               '<a href="'.$outfitters_permalink .'" title="'. $outfitters_title .'"><img class="img-responsive" src="' . $outfitters_img_url . '" alt="' . $alt_outfitters . '"></a>' .
+          echo '<div class="col-sm-6 col-md-4 featured">' .
+               '<div class="thumbnail">' .
+               '<a href="'.$outfitters_permalink .'" title="'. $outfitters_title .'"><img class="img-responsive collapse-grid" src="' . $outfitters_img_url . '" alt="' . $alt_outfitters . '"></a>' .
+               '</div>' .
+               '<div class="caption">' .
                '<a href="'. $outfitters_permalink .'" title="'. $outfitters_title .'"><h4>' . $outfitters_title . '</h4></a>';
-          echo '<p class="author-date"><span class="the-author">by:&nbsp;' . get_the_author() .'</span>&nbsp;<span class="the-date">'. get_the_date() .'</span></p>';
+          echo '<p class="author-date"><span class="the-author">by: ' . get_the_author() .'</span> <span class="the-date">'. get_the_date() .'</span></p>';
           
           the_excerpt(__('(more…)'));
           
-          echo '</div>';
+          echo  '</div>' .
+          '</div>';
           
           endwhile;
           wp_reset_postdata();
@@ -434,7 +450,7 @@
       <?php } ?>
       
       </div>
-      <div class="col-lg-3">
+      <div class="col-lg-3 sidebar">
       <?php
         $selectsidebar = get_post_meta(get_the_ID(), 'news-template-select-sidebar', true);
         get_sidebar($selectsidebar); ?>
