@@ -40,18 +40,43 @@
   
   <div id="news-header" class="container-fluid featured-post">
     
-    <?php $hasposts_post = get_posts('post_type=post');
-          if(!empty($hasposts_post)) { ?>
+    <?php
+    $hasposts_post = get_posts('post_type=post');
+    if(!empty($hasposts_post)) { ?>
     
     <div class="panel panel-default">
       <div class="panel-body">
         <div class="row">
           <?php
             $selectpost = get_post_meta(get_the_ID(), 'news-template-select-post', true);
-            $top_options = array(
+            
+              if ('flyfishing-news' == $selectpost) {
+               $taxonomy = 'outfitters';
+              } elseif ('lower48blog' == $selectpost) {
+               $taxonomy = 'lwr48blog';
+              } elseif ('travel-blog' == $selectpost) {
+               $taxonomy = 'travelblog-category';
+              }
+              
+              if ($selectpost !== '') {
+              $top_options = array(
                 'post_type' => $selectpost,
+                'tax_query' => array(
+                    array(
+                    'taxonomy' => $taxonomy,
+                    'field' => 'slug',
+                    'terms' => 'featured'
+                    )
+                ),
                 'posts_per_page'  => 1,
-            );
+              );} else {
+                $top_options = array(
+                  'post_type' => $selectpost,
+                  'category_name' => 'featured',
+                  'posts_per_page'  => 1,
+                );
+              }
+              
             $top_query  = new WP_Query($top_options);
             while($top_query -> have_posts()) : $top_query -> the_post();
       
@@ -62,13 +87,13 @@
                 $top_title = get_the_title();
       
                 echo '<div class="col-md-4 featured-caption">' .
-                     '<h1>'. $top_title .'</h1>';
+                     '<a href="'. $top_permalink .'" title="'. $top_title .'"><h1>'. $top_title .'</h1></a>';
                 echo '<p class="author-date featured"><span class="the-author">by: '.get_the_author().'</span> <span class="the-date">'.get_the_date().'</span></p>';
                       the_excerpt(__('(more…)'));
                 echo '</div>';
                 
                 echo '<div class="col-md-8 featured-news-image">' .
-                     '<img class="img-responsive news-featured-image" src="'. $top_img_url .'" alt="' . $alt_top . '">' .
+                     '<a href="'. $top_permalink .'" title="' . $alt_top . '"><img class="img-responsive news-featured-image" src="'. $top_img_url .'" alt="' . $alt_top . '"></a>' .
                      '</div>';
   
             endwhile;
