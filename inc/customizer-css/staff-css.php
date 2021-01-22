@@ -12,16 +12,16 @@ function load_staff_css() {
 	$staff_link_color		= get_theme_mod ('staff_link_color');
 	
 	if (is_page_template('page-templates/staff-template.php')) {
-		$css_8 .= ' 
+		$css_8 .= '
 		
 		.staff_bg_color {
 				background: ' . $staff_bg_color . ';
 			}
 			
-		.staff-text-color h3.widget-title, .staff-text-color h4.widget-title, .staff-text-color p { 
+		.staff-text-color h3.widget-title, .staff-text-color h4.widget-title, .staff-text-color p {
 			color: ' . $staff_text_color . ';
 		}
-		.caption a {
+		.caption p a {
 			color:' . $staff_link_color  . ';
 		}
 		
