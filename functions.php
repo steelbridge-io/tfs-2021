@@ -322,9 +322,14 @@ function load_dashicons_front_end() {
 }
 
 function the_fly_shop_scripts() {
-  
+  if(!is_page_template('page-templates/hero-template.php')) {
     wp_enqueue_style( 'the-fly-shop-btstrp-template', get_template_directory_uri() . '/assets/css/bootstrap.css', array(), '3.3.7', 'all' );
-
+    }
+   
+    if(is_page_template('page-templates/hero-template.php')) {
+      wp_enqueue_style('the-fly-shop-btstrp-template', get_template_directory_uri() . '/assets/css/bootstrap4/bootstrap.min.css', array(), '4.3.1', 'all');
+    }
+    
     wp_register_style( 'dashicons-tfs', get_template_directory_uri(). '/assets/css/dashicons.min.css');
     wp_enqueue_style( 'dashicons-tfs' );
    
@@ -413,6 +418,15 @@ function the_fly_shop_scripts() {
   }
     
     wp_enqueue_style( 'the-fly-shop-style', get_stylesheet_uri() );
+  
+  
+  if (is_page_template('page-templates/hero-template.php')) {
+    // Hero Template jQuery
+    wp_enqueue_script('hero-template-jquery', get_template_directory_uri() . '/assets/js/hero-template-js/jquery.slim.min.js', array('jquery'), '3.4.1', true);
+    
+    // Hero Template Bootstrap JS
+    wp_enqueue_script('hero-template-bootstrapjs', get_template_directory_uri() . '/assets/js/hero-template-js/bootstrap.bundle.min.js', array(), '4.3.1', true);
+  }
 
     wp_enqueue_script( 'the-fly-shop-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -423,9 +437,11 @@ function the_fly_shop_scripts() {
     // Javascript - JQuery is loaded here. min.js scripts are registered before loading.
     wp_register_script( 'new-font-awesome', 'https://use.fontawesome.com/releases/v5.0.9/js/all.js', array(), '2018', true );
     wp_enqueue_script( 'new-font-awesome');
-
-    wp_register_script( 'the-fly-shop-btstrpjs', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), '20161116', true );
-    wp_enqueue_script( 'the-fly-shop-btstrpjs' );
+    
+    if(!is_page_template('page-templates/hero-template.php')) {
+      wp_register_script('the-fly-shop-btstrpjs', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), '20161116', true);
+      wp_enqueue_script('the-fly-shop-btstrpjs');
+    }
 
     wp_register_script( 'the-fly-shop-scrollex', get_template_directory_uri() . '/assets/js/jquery.scrollex.min.js', array(), '20161116', true );
     wp_enqueue_script( 'the-fly-shop-scrollex' );
