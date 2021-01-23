@@ -27,7 +27,7 @@ itemToClone.children(':first-child').clone()
 });
 
 (function($) {
-	
+
 	skel
 		.breakpoints({
 			xlarge:	'(max-width: 1680px)',
@@ -43,7 +43,8 @@ itemToClone.children(':first-child').clone()
 			$body = $('body'),
 			$wrapper = $('#page-wrapper'),
 			$banner = $('#banner'),
-			$header = $('#header');
+			$header = $('#header'),
+			$narf	= $('#narf');
 
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
@@ -99,7 +100,7 @@ itemToClone.children(':first-child').clone()
 					visibleClass: 'is-menu-visible'
 				});
 
-		// Header.
+		// Template Header.
 			if (skel.vars.IEVersion < 9)
 				$header.removeClass('alt');
 
@@ -116,6 +117,25 @@ itemToClone.children(':first-child').clone()
 				});
 
 			}
+
+
+		// Header.
+		if (skel.vars.IEVersion < 9)
+			$narf.removeClass('alt');
+
+		if ($narf.length > 0
+			&&	$header.hasClass('alt')) {
+
+			$window.on('resize', function() { $window.trigger('scroll'); });
+
+			$narf.scrollex({
+				bottom:		$narf.outerHeight() + 1,
+				terminate:	function() { $header.removeClass('alt'); },
+				enter:		function() { $header.addClass('alt'); },
+				leave:		function() { $header.removeClass('alt'); }
+			});
+
+		}
 
 	});
 
