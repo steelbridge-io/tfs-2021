@@ -128,6 +128,11 @@ $tfs_metatags    = get_post_meta(get_the_ID(), 'seotfs-meta-tags', true);
                           <div id="page-wrapper-fish-camp">
                             <header id="header" <?php if ( is_admin_bar_showing() ){ echo 'style="margin-top:32px;"'; } ?> class="alt">
                               
+                              <?php elseif (is_page_template('page-templates/hero-template.php')): ?>
+  
+                              <div id="page-wrapper-hero-template">
+                                <header id="header" <?php if ( is_admin_bar_showing() ){ echo 'style="margin-top:32px;"'; } ?> class="alt">
+                              
                               <?php else: ?>
                               <header id="header" <?php if ( is_admin_bar_showing() ){ echo 'style="margin-top:32px;"'; } ?> class="alt">
                                 <?php endif; ?>
