@@ -11,13 +11,20 @@
   get_header();
   $basic_logo_upload = get_theme_mod ('basic_page_logo');
   $hero_description = get_post_meta(get_the_ID(), 'hero-video-image-description', true );
+  $hero_video_url = get_post_meta(get_the_ID(), 'hero-video-url', true );
   $default  = '';
   ?>
   </div>
+  </div>
+  <div id="narf">
   <section id="hero-header">
     <div class="overlay"></div>
     <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-      <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+      <?php if ($hero_video_url !== $default) { ?>
+        <source src="<?php echo $hero_video_url; ?>" type="video/mp4">
+      <?php  } else { ?>
+        <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+    <?php } ?>
     </video>
     <div class="container h-100">
       <div class="d-flex h-100 text-center align-items-center">
@@ -32,6 +39,7 @@
       </div>
     </div>
   </section>
+  </div>
   
   <div class="container-fluid">
     <div class="row hero-template-content">
@@ -54,6 +62,8 @@
       ?>
       </div>
     </div>
+  </div>
+  <div class="container-fluid">
 
 <?php
   get_footer();
