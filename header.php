@@ -84,13 +84,35 @@ $tfs_metatags    = get_post_meta(get_the_ID(), 'seotfs-meta-tags', true);
   
   <?php if ( is_front_page() ) : ?>
   
-  <div id="page-wrapper-front-page">
-    <header id="header" <?php if ( is_admin_bar_showing() ){ echo 'style="margin-top:32px;"'; } ?> class="alt">
-      
+  <?php include 'headers/front-page-header.php'; ?>
+    
       <?php elseif ( is_page_template('page-templates/stream-report-template.php') ) : ?>
       
       <div id="page-wrapper-stream-report">
         <header id="header" <?php if ( is_admin_bar_showing() ){ echo 'style="margin-top:32px;"'; } ?> class="alt">
+          <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'the-fly-shop' ); ?></a>
+  
+          <h1><a style="margin-right:1em;" href="<?php echo esc_url(home_url( '/' )); ?>" rel="home"><?php bloginfo('name'); ?><a href="tel:18006693474">800&middot;669&middot;3474</a></h1>
+  
+          <nav id="nav">
+    
+            <ul>
+              <li class="special">
+                <a href="#menu" class="menuToggle"><span class="menu-title">Menu</span></a>
+                <?php
+                  // This loads the custom menu from your wordpress dashboard
+                  wp_nav_menu( array(
+                    'theme_location'		=> 'primary',
+                    'container'				=> 'div',
+                    'container_id'			=> 'menu'
+                  ));
+                ?>
+              </li>
+            </ul>
+  
+          </nav>
+
+        </header>
           
           <!-- ====== Hero image for travel header ====== -->
           
@@ -98,6 +120,29 @@ $tfs_metatags    = get_post_meta(get_the_ID(), 'seotfs-meta-tags', true);
           
           <div id="page-wrapper-travel">
             <header id="header" <?php if ( is_admin_bar_showing() ){ echo 'style="margin-top:32px;"'; } ?> class="alt">
+              <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'the-fly-shop' ); ?></a>
+  
+              <h1><a style="margin-right:1em;" href="<?php echo esc_url(home_url( '/' )); ?>" rel="home"><?php bloginfo('name'); ?><a href="tel:18006693474">800&middot;669&middot;3474</a></h1>
+  
+              <nav id="nav">
+    
+                <ul>
+                  <li class="special">
+                    <a href="#menu" class="menuToggle"><span class="menu-title">Menu</span></a>
+                    <?php
+                      // This loads the custom menu from your wordpress dashboard
+                      wp_nav_menu( array(
+                        'theme_location'		=> 'primary',
+                        'container'				=> 'div',
+                        'container_id'			=> 'menu'
+                      ));
+                    ?>
+                  </li>
+                </ul>
+  
+              </nav>
+
+            </header>
               
               <!-- ===== Hero image for private waters ===== -->
               
@@ -105,6 +150,29 @@ $tfs_metatags    = get_post_meta(get_the_ID(), 'seotfs-meta-tags', true);
               
               <div id="page-wrapper-private-waters">
                 <header id="header" <?php if ( is_admin_bar_showing() ){ echo 'style="margin-top:32px;"'; } ?> class="alt">
+                  <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'the-fly-shop' ); ?></a>
+  
+                  <h1><a style="margin-right:1em;" href="<?php echo esc_url(home_url( '/' )); ?>" rel="home"><?php bloginfo('name'); ?><a href="tel:18006693474">800&middot;669&middot;3474</a></h1>
+  
+                  <nav id="nav">
+    
+                    <ul>
+                      <li class="special">
+                        <a href="#menu" class="menuToggle"><span class="menu-title">Menu</span></a>
+                        <?php
+                          // This loads the custom menu from your wordpress dashboard
+                          wp_nav_menu( array(
+                            'theme_location'		=> 'primary',
+                            'container'				=> 'div',
+                            'container_id'			=> 'menu'
+                          ));
+                        ?>
+                      </li>
+                    </ul>
+  
+                  </nav>
+
+                </header>
                   
                   
                   <!-- ===== Hero image for guide service ===== -->
@@ -113,6 +181,29 @@ $tfs_metatags    = get_post_meta(get_the_ID(), 'seotfs-meta-tags', true);
                   
                   <div id="page-wrapper-guide-service">
                     <header id="header" <?php if ( is_admin_bar_showing() ){ echo 'style="margin-top:32px;"'; } ?> class="alt">
+                      <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'the-fly-shop' ); ?></a>
+  
+                      <h1><a style="margin-right:1em;" href="<?php echo esc_url(home_url( '/' )); ?>" rel="home"><?php bloginfo('name'); ?><a href="tel:18006693474">800&middot;669&middot;3474</a></h1>
+  
+                      <nav id="nav">
+    
+                        <ul>
+                          <li class="special">
+                            <a href="#menu" class="menuToggle"><span class="menu-title">Menu</span></a>
+                            <?php
+                              // This loads the custom menu from your wordpress dashboard
+                              wp_nav_menu( array(
+                                'theme_location'		=> 'primary',
+                                'container'				=> 'div',
+                                'container_id'			=> 'menu'
+                              ));
+                            ?>
+                          </li>
+                        </ul>
+  
+                      </nav>
+
+                    </header>
                       
                       <!-- ==== Hero image for schools ==== -->
                       
@@ -120,6 +211,29 @@ $tfs_metatags    = get_post_meta(get_the_ID(), 'seotfs-meta-tags', true);
                       
                       <div id="page-wrapper-schools">
                         <header id="header" <?php if ( is_admin_bar_showing() ){ echo 'style="margin-top:32px;"'; } ?> class="alt">
+                          <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'the-fly-shop' ); ?></a>
+  
+                          <h1><a style="margin-right:1em;" href="<?php echo esc_url(home_url( '/' )); ?>" rel="home"><?php bloginfo('name'); ?><a href="tel:18006693474">800&middot;669&middot;3474</a></h1>
+  
+                          <nav id="nav">
+    
+                            <ul>
+                              <li class="special">
+                                <a href="#menu" class="menuToggle"><span class="menu-title">Menu</span></a>
+                                <?php
+                                  // This loads the custom menu from your wordpress dashboard
+                                  wp_nav_menu( array(
+                                    'theme_location'		=> 'primary',
+                                    'container'				=> 'div',
+                                    'container_id'			=> 'menu'
+                                  ));
+                                ?>
+                              </li>
+                            </ul>
+  
+                          </nav>
+
+                        </header>
                           
                           <!-- ==== Hero image for Fish Camp ==== -->
                           
@@ -127,36 +241,81 @@ $tfs_metatags    = get_post_meta(get_the_ID(), 'seotfs-meta-tags', true);
                           
                           <div id="page-wrapper-fish-camp">
                             <header id="header" <?php if ( is_admin_bar_showing() ){ echo 'style="margin-top:32px;"'; } ?> class="alt">
-                              
-                              <?php elseif (is_page_template('page-templates/hero-template.php')): ?>
+                              <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'the-fly-shop' ); ?></a>
   
-                              <div id="page-wrapper-hero-template">
-                                <header id="header" <?php if ( is_admin_bar_showing() ){ echo 'style="margin-top:32px;"'; } ?> class="alt">
-                              
-                              <?php else: ?>
-                              <header id="header" <?php if ( is_admin_bar_showing() ){ echo 'style="margin-top:32px;"'; } ?> class="alt">
-                                <?php endif; ?>
-                                
-                                <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'the-fly-shop' ); ?></a>
-                                
-                                <h1><a style="margin-right:1em;" href="<?php echo esc_url(home_url( '/' )); ?>" rel="home"><?php bloginfo('name'); ?><a href="tel:18006693474">800&middot;669&middot;3474</a></h1>
-                                
-                                <nav id="nav">
-                                  
-                                  <ul>
-                                    <li class="special">
-                                      <a href="#menu" class="menuToggle"><span class="menu-title">Menu</span></a>
-                                      <?php
+                              <h1><a style="margin-right:1em;" href="<?php echo esc_url(home_url( '/' )); ?>" rel="home"><?php bloginfo('name'); ?><a href="tel:18006693474">800&middot;669&middot;3474</a></h1>
+  
+                              <nav id="nav">
+    
+                                <ul>
+                                  <li class="special">
+                                    <a href="#menu" class="menuToggle"><span class="menu-title">Menu</span></a>
+                                    <?php
                                       // This loads the custom menu from your wordpress dashboard
                                       wp_nav_menu( array(
                                         'theme_location'		=> 'primary',
                                         'container'				=> 'div',
                                         'container_id'			=> 'menu'
                                       ));
+                                    ?>
+                                  </li>
+                                </ul>
+  
+                              </nav>
+
+                            </header>
+                              
+                              <?php elseif (is_page_template('page-templates/hero-template.php')): ?>
+  
+                              <div id="page-wrapper-hero-template">
+                                <header id="header" <?php if ( is_admin_bar_showing() ){ echo 'style="margin-top:32px;"'; } ?> class="alt">
+                                  <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'the-fly-shop' ); ?></a>
+  
+                                  <h1><a style="margin-right:1em;" href="<?php echo esc_url(home_url( '/' )); ?>" rel="home"><?php bloginfo('name'); ?><a href="tel:18006693474">800&middot;669&middot;3474</a></h1>
+  
+                                  <nav id="nav">
+    
+                                    <ul>
+                                      <li class="special">
+                                        <a href="#menu" class="menuToggle"><span class="menu-title">Menu</span></a>
+                                        <?php
+                                          // This loads the custom menu from your wordpress dashboard
+                                          wp_nav_menu( array(
+                                            'theme_location'		=> 'primary',
+                                            'container'				=> 'div',
+                                            'container_id'			=> 'menu'
+                                          ));
+                                        ?>
+                                      </li>
+                                    </ul>
+  
+                                  </nav>
+
+                                </header>
+                              
+                              <?php else: ?>
+                              <header id="header" <?php if ( is_admin_bar_showing() ){ echo 'style="margin-top:32px;"'; } ?> class="alt">
+                                <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'the-fly-shop' ); ?></a>
+  
+                                <h1><a style="margin-right:1em;" href="<?php echo esc_url(home_url( '/' )); ?>" rel="home"><?php bloginfo('name'); ?><a href="tel:18006693474">800&middot;669&middot;3474</a></h1>
+  
+                                <nav id="nav">
+    
+                                  <ul>
+                                    <li class="special">
+                                      <a href="#menu" class="menuToggle"><span class="menu-title">Menu</span></a>
+                                      <?php
+                                        // This loads the custom menu from your wordpress dashboard
+                                        wp_nav_menu( array(
+                                          'theme_location'		=> 'primary',
+                                          'container'				=> 'div',
+                                          'container_id'			=> 'menu'
+                                        ));
                                       ?>
                                     </li>
                                   </ul>
-                                
+  
                                 </nav>
-                              
+
                               </header>
+                                <?php endif; ?>
