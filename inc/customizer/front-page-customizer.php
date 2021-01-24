@@ -13,11 +13,28 @@ $wp_customize -> add_section(
 	)
 );
 
+// Adds Page URL 1 URL - Footer
+  $wp_customize->add_setting( 'front-page-hero-video', array(
+    'default' 					=> '',
+    'type' 							=> 'theme_mod',
+    'capability' 				=> 'edit_theme_options',
+    'transport' 				=> 'postMessage',
+    'sanitize_callback' => 'esc_url',
+  ));
+  // Add control
+  $wp_customize->add_control( 'front-page-hero-video', array(
+    'type' 						=> 'url',
+    'priority' 				=> 10,
+    'section' 				=> 'tfs_front_page',
+    'label'						=> __( 'Add Video URL', 'the-fly-shop' ),
+    'description' 		=> 'Add a Google Cloud URL only',
+  ));
+  
 // Creates custom Hero Image field for Front Page
     $wp_customize -> add_setting ( 'front-page-hero-image', array(
         'default'           => '',
         'type'              => 'theme_mod',
-        'transport'         => 'postMessage'   
+        'transport'         => 'postMessage'
     ));
     $wp_customize -> add_control (
     new WP_Customize_Image_Control (
@@ -286,5 +303,4 @@ $wp_customize -> add_section(
 			)
 		)
 	);
-	
 	
