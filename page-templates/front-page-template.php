@@ -17,31 +17,10 @@ include_once('post-meta/post-meta-front-page.php');
 
 get_header(); ?>
   
-  <!-- Banner -->
-  <!-- The .banner hack is used with the Theme Customizer feature. Because JQuery does not target pseudo elements, we can target a class in the DOM and change it to a <style> element -->
-  <span class="bannerhack"></span>
-  <section id="banner">
-    <div class="inner">
-      <img src="<?php echo $front_page_logo;	?>" class="img-responsive center-block" align="center" alt="The Fly Shop">
-      <h2 class="site-description"><?php bloginfo('description'); ?></h2>
-      <h3><?php echo get_theme_mod('telephone_number'); ?></h3>
-    </div>
-    <a href="#main" class="more scrolly">Learn More</a>
-  </section>
   <article id="main">
     <!-- === JOIN NEWS LETTER === -->
     <div id="fp-well" class="well well-sm text-center no-margin-bottom">
       <div id="fp-well" class="well well-sm text-center no-margin-bottom">
-       <!-- <form class="form-inline" method="post" action="https://oi.vresp.com?fid=85819a996f" target="vr_optin_popup"  onsubmit="window.open( 'https://www.verticalresponse.com', 'vr_optin_popup', 'scrollbars=yes,width=600,height=450' ); return true">
-          <div id="pop-over-fp" class="form-group link-color-tfs-red">
-            <div>
-              <label for="exampleInputEmail2"><h3>Sign Up For Our Newsletter</h3></label>
-            </div>
-            <input name="email_address" type="email" class="form-control removeglow" id="exampleInputEmail2" placeholder="jane.doe@example.com"><span class="mt-1618-mobile">
-              <button class="btn-md btn background-color-tfs-red font-color-white opacity-7"  type="submit" value="Sign Up!">Click Here To Sign Up!</button>
-              <a tabindex="0" role="button" aria-hidden="true" data-trigger="hover" data-toggle="popover" data-placement="top" title="Safe Subscribe" data-content="We respect your privacy and do not tolerate spam and will never sell, rent, lease or give away your email address to any third party. Nor will we send you unsolicited email. You will have the option to safely unsubscribe upon receiving our newsletters. We just want to deleiver great photos, fantastic fly fishing ideas and motivation!"><span class="glyphicon glyphicon-question-sign gi-2x"></span></a></span>
-          </div>
-        </form> -->
         <!-- Begin Constant Contact Inline Form Code -->
         <div>
           <label for="exampleInputEmail2"><h3>Sign Up For Our Newsletter</h3></label>
