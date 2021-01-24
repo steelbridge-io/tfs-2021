@@ -5,27 +5,28 @@
  * Otherwise your styles won't load in the preview window.
  */
 
-function load_front_page_css() {
-    $css_1 = '';
-    $front_page_hero_image  = get_theme_mod ('front-page-hero-image');
-    $tel_color						  = get_theme_mod ('tel_color');
-    $description_color		  = get_theme_mod ('description_color');
-    $description_border		  = get_theme_mod ('description_border');
-    $menu_color 					  = get_theme_mod ('menu_color');
-    $frontp_bg_color   		  = get_theme_mod ('frontp_bg_color');
-    $frontp_title_color		  = get_theme_mod ('frontp_title_color');
-    $frontp_article_title	  = get_theme_mod ('frontp_article_title');
-    $frontp_grid_link			  = get_theme_mod ('frontp_grid_link');
-    $frontp_email_bg			  = get_theme_mod ('frontp_email_bg');
-    $frontp_text_color		  = get_theme_mod ('frontp_text_color');
-
-    $flip_page_title_color  = get_theme_mod ('flip_page_title_color');
-
-
-    // Modified menu color css
-
+function load_front_page_css()
+{
+  $default = '';
+  $css_1 = '';
+  $front_page_hero_image = get_theme_mod('front-page-hero-image');
+  $front_page_hero_video = get_theme_mod('front-page-hero-video');
+  $tel_color = get_theme_mod('tel_color');
+  $description_color = get_theme_mod('description_color');
+  $description_border = get_theme_mod('description_border');
+  $menu_color = get_theme_mod('menu_color');
+  $frontp_bg_color = get_theme_mod('frontp_bg_color');
+  $frontp_title_color = get_theme_mod('frontp_title_color');
+  $frontp_article_title = get_theme_mod('frontp_article_title');
+  $frontp_grid_link = get_theme_mod('frontp_grid_link');
+  $frontp_email_bg = get_theme_mod('frontp_email_bg');
+  $frontp_text_color = get_theme_mod('frontp_text_color');
+  
+  
+  $flip_page_title_color = get_theme_mod('flip_page_title_color');
+    
     $css_1 .= '
-			body.landing #page-wrapper-front-page, body.is-mobile.landing #page-wrapper-front-page #banner, body.is-mobile.landing #page-wrapper-front-page .wrapper.style4 {
+      body.landing #page-wrapper-front-page, body.is-mobile.landing #page-wrapper-front-page #banner, body.is-mobile.landing #page-wrapper-front-page .wrapper.style4 {
         background-image: url(' . $front_page_hero_image . ');
       }
       #fp-well h3, #fp-well p {
@@ -33,7 +34,7 @@ function load_front_page_css() {
       }
       #menu {
 				background: ' . $menu_color . ';
-			}				
+			}
 			.inner h3 {
 				color: ' . $tel_color . ';
 			}
