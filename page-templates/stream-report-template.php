@@ -9,21 +9,6 @@ include_once('post-meta/post-meta-stream-report.php');
 
 get_header();
 ?>
-  
-  <!-- Banner -->
-  <section id="banner">
-    <div class="inner">
-      <img src="<?php echo $tfs_logo_report; ?>" class="img-responsive center-block" alt="The Fly Shop Signature
-  Destination">
-      <h2><?php echo $stream_report_title; ?></h2>
-      
-      <?php if ( get_post_meta($post->ID, 'streamreport-description', true) )
-        echo '<p class="template-description">' . $stream_report_description . '</p>' ?>
-    
-    </div>
-    <a href="#main" class="more scrolly">Reports are here!</a>
-  </section>
-  
   <!-- Main -->
   <div class="clearfix">
     <article id="main">
