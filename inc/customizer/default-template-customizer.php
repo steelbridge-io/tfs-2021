@@ -19,7 +19,7 @@ $wp_customize -> add_section(
 			'title'							=> __('Default Template'),
 			'description'				=> __('Default Template Customizer Features'),
 			'priority'					=> 80,
-			'active_callback'		=> function() { return is_singular() && !is_page_template('page-templates/basic-page-template.php') && !is_page_template('page-templates/blog-template.php') && !is_page_template('page-templates/fish-camp-template.php') && !is_page_template('page-templates/travel-template.php') && !is_page_template('page-templates/stream-report-template.php') && !is_page_template('page-templates/staff-template.php') && !is_page_template('page-templates/signature-template.php') && !is_page_template('page-templates/sections-template.php') && !is_page_template('page-templates/schools-template.php') && !is_page_template('page-templates/private-template.php') && !is_page_template('page-templates/guide-service-template.php') && !is_page_template('page-templates/front-page-template.php');}
+			/*'active_callback'		=> function() { return is_singular() && !is_page_template('page-templates/basic-page-template.php') && !is_page_template('page-templates/blog-template.php') && !is_page_template('page-templates/fish-camp-template.php') && !is_page_template('page-templates/travel-template.php') && !is_page_template('page-templates/stream-report-template.php') && !is_page_template('page-templates/staff-template.php') && !is_page_template('page-templates/signature-template.php') && !is_page_template('page-templates/sections-template.php') && !is_page_template('page-templates/schools-template.php') && !is_page_template('page-templates/private-template.php') && !is_page_template('page-templates/guide-service-template.php') && !is_page_template('page-templates/front-page-template.php');} */
 	)
 );
 
@@ -64,7 +64,7 @@ $wp_customize -> add_setting(
 $wp_customize -> add_control (
 	new WP_Customize_Color_Control (
 		$wp_customize,
-		'default_page_bg', 
+		'default_page_bg',
 			array(
 				'label'			=> __( '<div style="margin-top:1.618em;">' . 'Default Page Template Background Color' . '</div>', 'the-fly-shop' ),
 				'priority' 	=> 10,
@@ -89,7 +89,7 @@ $wp_customize -> add_setting(
 $wp_customize -> add_control (
 	new WP_Customize_Color_Control (
 		$wp_customize,
-		'default_cont_bg', 
+		'default_cont_bg',
 			array(
 				'label'			=> __( '<div style="margin-top:1.618em;">' . 'Default Page Template Background Color' . '</div>', 'the-fly-shop' ),
 				'priority' 	=> 10,
@@ -114,7 +114,7 @@ $wp_customize -> add_setting(
 $wp_customize -> add_control (
 	new WP_Customize_Color_Control (
 		$wp_customize,
-		'default_page_color', 
+		'default_page_color',
 			array(
 				'label'			=> __( '<div style="margin-top:1.618em;">' . 'Default Text Color' . '</div>', 'the-fly-shop' ),
 				'priority' 	=> 10,
@@ -139,7 +139,7 @@ $wp_customize -> add_setting(
 $wp_customize -> add_control (
 	new WP_Customize_Color_Control (
 		$wp_customize,
-		'default_entry_color', 
+		'default_entry_color',
 			array(
 				'label'			=> __( '<div style="margin-top:1.618em;">' . 'Default Container Text Color' . '</div>', 'the-fly-shop' ),
 				'priority' 	=> 10,
