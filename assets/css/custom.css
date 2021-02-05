@@ -2344,10 +2344,7 @@ body {
 @media (min-width: 992px) {
   .adventures-template-signature-template #primary .signature_bg_color .row {
     display: flex;
-    justify-content: center; }
-
-  .signature-template #main #banner {
-    min-height: 35em !important; } }
+    justify-content: center; } }
 @media (min-width: 768px) {
   .media:nth-child(n+1) {
     padding-top: 1em; } }
