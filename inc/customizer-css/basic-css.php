@@ -12,12 +12,16 @@ function load_basic_css() {
 	$basic_page_color		= get_theme_mod ('basic_page_color');
 	
 	if (is_page_template('page-templates/basic-page-template.php')) {
-		$css_basic .= ' 
+		$css_basic .= '
 		
 		.container-fluid.basic-page-template {
 				background: ' . $basic_page_bg . ';
 			}
-		.basic-page-template p { 
+		.basic-page-template p,
+		 .container #primary #main article #basic-content h2,
+		 .container #primary #main article #basic-content p,
+		 .row .col-sm-4 p,
+		 .row .col-sm-4 ul li a{
 			color: ' . $basic_page_color . ';
 		}
 		
