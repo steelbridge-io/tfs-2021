@@ -1,7 +1,7 @@
 <?php
-/* 
+/*
 	* Template Name: Sections Template
-	* Template Post Type: post, page, travel_cpt, schools_cpt, adventures, guide_service, fishcamp_cpt
+	* Template Post Type: post, page, travel_cpt, schools_cpt, adventures, guide_service, fishcamp_cpt, travel-blog
 	* Developed for The Fly Shop
 	* Author: Chris Parsons
 	* Author URL: https://steelbridge.io
@@ -46,7 +46,7 @@ get_header(); ?>
        </div>
     </div>
 		
-  <!-- === If there isn't a Featured Image, use default === -->  
+  <!-- === If there isn't a Featured Image, use default === -->
   <?php else: ?>
     
     <header class="parallax-window center-content-flex" data-parallax="scroll" data-image-src="<?php echo $the_sections_default; ?>">
@@ -57,7 +57,7 @@ get_header(); ?>
 				
 				<h2><?php echo get_the_title(); ?></h2>
 
-				 <?php if ( get_post_meta($post->ID, 'sections-description', true) ) 
+				 <?php if ( get_post_meta($post->ID, 'sections-description', true) )
 						echo '<p class="template-description">' . $sections_description . '</p>' ?>
 						
 				<h3>800 &bull; 669 &bull; 3474</h3>
@@ -86,11 +86,11 @@ get_header(); ?>
 			</main>
 		</div>
 	</div>
-    
+  
   <!-- ==== CAROUSEL ==== -->
   <!-- Item slider-->
   <!-- Javascript is in main.js -->
-  <?php 
+  <?php
   // Carousel Images activated by check-box
   if(get_post_meta(get_the_ID(), 'sections-csel-checkbox', true) == 'yes') :?>
 
@@ -149,7 +149,7 @@ get_header(); ?>
     </div>
   </div><!-- Item slider end-->
   <?php endif; ?>
-    
+  
   <section id="two" class="wrapper alt style2">
     
     <!-- ==== Section #1 ==== -->
@@ -160,13 +160,13 @@ get_header(); ?>
 
       <div class="image">
         <!-- Costs Video/Text/Image Option -->
-        <?php 
+        <?php
         if(get_post_meta(get_the_ID(), 'sections-1-video-image-checkbox', true) == 'yes') :?>
         
         <div class="embed-responsive embed-responsive-16by9">
-          
+        
         <iframe class="embed-responsive-item" src="<?php echo $sections_1_video; ?>" allowfullscreen></iframe>
-          
+        
         </div>
         
         <?php else: ?>
@@ -175,55 +175,55 @@ get_header(); ?>
         
         <?php endif; ?>
         
-      </div> 
+      </div>
 
       <div class="content">
         <div id="travel-style">
-          
+        
         <h2><?php echo $sections_1_title;?></h2>
-          
+        
         <p class="travel"><?php echo $sections_1_textarea;?></p>
-          
-        <?php // Displays read more section if needed 
+        
+        <?php // Displays read more section if needed
         if(get_post_meta(get_the_ID(), 'sections-1-readmore-checkbox', true) == 'yes') :?>
-          
+        
         <div class="panel-group" id="accordion1">
           <div class="panel-travel">
             
             <div class="panel-heading accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" data-target="#collapseTwo1">
-              
+            
             <h4 class="panel-title travel">Read more...&nbsp;<span class="arrow-down"></span></h4>
-              
+            
             </div>
             
             <div id="collapseTwo1" class="panel-collapse collapse">
               <div class="panel-body">
-                
+              
               <p class="travel"><?php echo $sections_1_readmore;?></p>
-                
+              
               </div>
             </div>
             
           </div>
         </div> <!-- /.panel-group -->
-          
+        
         <?php endif; ?>
-          
+        
       </div> <!-- /#travel-style -->
     </div> <!-- /.content -->
-      
+    
   </section>
   <?php endif; ?> <!-- sections-1-option-checkbox -->
-    
+  
   <!-- ==== Section #2 ==== -->
-    
+  
   <?php
   if(get_post_meta(get_the_ID(), 'sections-2-option-checkbox', true) == 'yes') : ?>
   <section class="spotlight">
 
     <div class="image">
       <!-- Costs Video/Text/Image Option -->
-      <?php 
+      <?php
       if(get_post_meta(get_the_ID(), 'sections-2-video-image-checkbox', true) == 'yes') :?>
 
       <div class="embed-responsive embed-responsive-16by9">
@@ -238,7 +238,7 @@ get_header(); ?>
 
       <?php endif; ?>
 
-    </div> 
+    </div>
 
     <div class="content">
       <div id="travel-style">
@@ -247,7 +247,7 @@ get_header(); ?>
 
       <p class="travel"><?php echo $sections_2_textarea;?></p>
 
-      <?php // Displays read more section if needed 
+      <?php // Displays read more section if needed
       if(get_post_meta(get_the_ID(), 'sections-2-readmore-checkbox', true) == 'yes') :?>
 
       <div class="panel-group" id="accordion2">
@@ -277,16 +277,16 @@ get_header(); ?>
 
   </section>
   <?php endif; ?> <!-- sections-2-option-checkbox -->
-    
+  
   <!-- ==== Section #3 ==== -->
-    
+  
   <?php
   if(get_post_meta(get_the_ID(), 'sections-3-option-checkbox', true) == 'yes') : ?>
   <section class="spotlight">
 
     <div class="image">
       <!-- Costs Video/Text/Image Option -->
-      <?php 
+      <?php
       if(get_post_meta(get_the_ID(), 'sections-3-video-image-checkbox', true) == 'yes') :?>
 
       <div class="embed-responsive embed-responsive-16by9">
@@ -301,7 +301,7 @@ get_header(); ?>
 
       <?php endif; ?>
 
-    </div> 
+    </div>
 
     <div class="content">
       <div id="travel-style">
@@ -310,7 +310,7 @@ get_header(); ?>
 
       <p class="travel"><?php echo $sections_3_textarea;?></p>
 
-      <?php // Displays read more section if needed 
+      <?php // Displays read more section if needed
       if(get_post_meta(get_the_ID(), 'sections-3-readmore-checkbox', true) == 'yes') :?>
 
       <div class="panel-group" id="accordion3">
@@ -340,16 +340,16 @@ get_header(); ?>
 
   </section>
   <?php endif; ?> <!-- sections-3-option-checkbox -->
-    
+  
   <!-- ==== Section #4 ==== -->
-    
+  
   <?php
   if(get_post_meta(get_the_ID(), 'sections-4-option-checkbox', true) == 'yes') : ?>
   <section class="spotlight">
 
     <div class="image">
       <!-- Costs Video/Text/Image Option -->
-      <?php 
+      <?php
       if(get_post_meta(get_the_ID(), 'sections-4-video-image-checkbox', true) == 'yes') :?>
 
       <div class="embed-responsive embed-responsive-16by9">
@@ -364,7 +364,7 @@ get_header(); ?>
 
       <?php endif; ?>
 
-    </div> 
+    </div>
 
     <div class="content">
       <div id="travel-style">
@@ -373,7 +373,7 @@ get_header(); ?>
 
       <p class="travel"><?php echo $sections_4_textarea;?></p>
 
-      <?php // Displays read more section if needed 
+      <?php // Displays read more section if needed
       if(get_post_meta(get_the_ID(), 'sections-4-readmore-checkbox', true) == 'yes') :?>
 
       <div class="panel-group" id="accordion4">
@@ -403,16 +403,16 @@ get_header(); ?>
 
   </section>
   <?php endif; ?> <!-- sections-4-option-checkbox -->
-    
+  
   <!-- ==== Section #5 ==== -->
-    
+  
   <?php
   if(get_post_meta(get_the_ID(), 'sections-5-option-checkbox', true) == 'yes') : ?>
   <section class="spotlight">
 
     <div class="image">
       <!-- Costs Video/Text/Image Option -->
-      <?php 
+      <?php
       if(get_post_meta(get_the_ID(), 'sections-5-video-image-checkbox', true) == 'yes') :?>
 
       <div class="embed-responsive embed-responsive-16by9">
@@ -427,7 +427,7 @@ get_header(); ?>
 
       <?php endif; ?>
 
-    </div> 
+    </div>
 
     <div class="content">
       <div id="travel-style">
@@ -436,7 +436,7 @@ get_header(); ?>
 
       <p class="travel"><?php echo $sections_5_textarea;?></p>
 
-      <?php // Displays read more section if needed 
+      <?php // Displays read more section if needed
       if(get_post_meta(get_the_ID(), 'sections-5-readmore-checkbox', true) == 'yes') :?>
 
       <div class="panel-group" id="accordion5">
@@ -468,14 +468,14 @@ get_header(); ?>
   <?php endif; ?> <!-- sections-5-option-checkbox -->
 
   <!-- ==== Section #6 ==== -->
-    
+  
   <?php
   if(get_post_meta(get_the_ID(), 'sections-6-option-checkbox', true) == 'yes') : ?>
   <section class="spotlight">
 
     <div class="image">
       <!-- Costs Video/Text/Image Option -->
-      <?php 
+      <?php
       if(get_post_meta(get_the_ID(), 'sections-6-video-image-checkbox', true) == 'yes') :?>
 
       <div class="embed-responsive embed-responsive-16by9">
@@ -490,7 +490,7 @@ get_header(); ?>
 
       <?php endif; ?>
 
-    </div> 
+    </div>
 
     <div class="content">
       <div id="travel-style">
@@ -499,7 +499,7 @@ get_header(); ?>
 
       <p class="travel"><?php echo $sections_6_textarea;?></p>
 
-      <?php // Displays read more section if needed 
+      <?php // Displays read more section if needed
       if(get_post_meta(get_the_ID(), 'sections-6-readmore-checkbox', true) == 'yes') :?>
 
       <div class="panel-group" id="accordion6">
@@ -531,14 +531,14 @@ get_header(); ?>
   <?php endif; ?> <!-- sections-6-option-checkbox -->
 
   <!-- ==== Section #7 ==== -->
-    
+  
   <?php
   if(get_post_meta(get_the_ID(), 'sections-7-option-checkbox', true) == 'yes') : ?>
   <section class="spotlight">
 
     <div class="image">
       <!-- Costs Video/Text/Image Option -->
-      <?php 
+      <?php
       if(get_post_meta(get_the_ID(), 'sections-7-video-image-checkbox', true) == 'yes') :?>
 
       <div class="embed-responsive embed-responsive-16by9">
@@ -553,7 +553,7 @@ get_header(); ?>
 
       <?php endif; ?>
 
-    </div> 
+    </div>
 
     <div class="content">
       <div id="travel-style">
@@ -562,7 +562,7 @@ get_header(); ?>
 
       <p class="travel"><?php echo $sections_7_textarea;?></p>
 
-      <?php // Displays read more section if needed 
+      <?php // Displays read more section if needed
       if(get_post_meta(get_the_ID(), 'sections-7-readmore-checkbox', true) == 'yes') :?>
 
       <div class="panel-group" id="accordion7">
@@ -594,14 +594,14 @@ get_header(); ?>
   <?php endif; ?> <!-- sections-7-option-checkbox -->
 
   <!-- ==== Section #8 ==== -->
-    
+  
   <?php
   if(get_post_meta(get_the_ID(), 'sections-8-option-checkbox', true) == 'yes') : ?>
   <section class="spotlight">
 
     <div class="image">
       <!-- Costs Video/Text/Image Option -->
-      <?php 
+      <?php
       if(get_post_meta(get_the_ID(), 'sections-8-video-image-checkbox', true) == 'yes') :?>
 
       <div class="embed-responsive embed-responsive-16by9">
@@ -616,7 +616,7 @@ get_header(); ?>
 
       <?php endif; ?>
 
-    </div> 
+    </div>
 
     <div class="content">
       <div id="travel-style">
@@ -625,7 +625,7 @@ get_header(); ?>
 
       <p class="travel"><?php echo $sections_8_textarea;?></p>
 
-      <?php // Displays read more section if needed 
+      <?php // Displays read more section if needed
       if(get_post_meta(get_the_ID(), 'sections-8-readmore-checkbox', true) == 'yes') :?>
 
       <div class="panel-group" id="accordion8">
@@ -655,16 +655,16 @@ get_header(); ?>
 
   </section>
   <?php endif; ?> <!-- sections-8-option-checkbox -->
-    
+  
   <!-- ==== Section #9 ==== -->
-    
+  
   <?php
   if(get_post_meta(get_the_ID(), 'sections-9-option-checkbox', true) == 'yes') : ?>
   <section class="spotlight">
 
     <div class="image">
       <!-- Costs Video/Text/Image Option -->
-      <?php 
+      <?php
       if(get_post_meta(get_the_ID(), 'sections-9-video-image-checkbox', true) == 'yes') :?>
 
       <div class="embed-responsive embed-responsive-16by9">
@@ -679,7 +679,7 @@ get_header(); ?>
 
       <?php endif; ?>
 
-    </div> 
+    </div>
 
     <div class="content">
       <div id="travel-style">
@@ -688,7 +688,7 @@ get_header(); ?>
 
       <p class="travel"><?php echo $sections_9_textarea;?></p>
 
-      <?php // Displays read more section if needed 
+      <?php // Displays read more section if needed
       if(get_post_meta(get_the_ID(), 'sections-9-readmore-checkbox', true) == 'yes') :?>
 
       <div class="panel-group" id="accordion9">
@@ -718,16 +718,16 @@ get_header(); ?>
 
   </section>
   <?php endif; ?> <!-- sections-9-option-checkbox -->
-    
+  
   <!-- ==== Section #10 ==== -->
-    
+  
   <?php
   if(get_post_meta(get_the_ID(), 'sections-10-option-checkbox', true) == 'yes') : ?>
   <section class="spotlight">
 
     <div class="image">
       <!-- Costs Video/Text/Image Option -->
-      <?php 
+      <?php
       if(get_post_meta(get_the_ID(), 'sections-10-video-image-checkbox', true) == 'yes') :?>
 
       <div class="embed-responsive embed-responsive-16by9">
@@ -742,7 +742,7 @@ get_header(); ?>
 
       <?php endif; ?>
 
-    </div> 
+    </div>
 
     <div class="content">
       <div id="travel-style">
@@ -751,7 +751,7 @@ get_header(); ?>
 
       <p class="travel"><?php echo $sections_10_textarea;?></p>
 
-      <?php // Displays read more section if needed 
+      <?php // Displays read more section if needed
       if(get_post_meta(get_the_ID(), 'sections-10-readmore-checkbox', true) == 'yes') :?>
 
       <div class="panel-group" id="accordion10">
@@ -781,7 +781,7 @@ get_header(); ?>
 
   </section>
   <?php endif; ?> <!-- sections-10-option-checkbox -->
-   
+  
 </section>
 
 <?php
